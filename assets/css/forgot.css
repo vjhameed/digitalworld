@@ -1,0 +1,38 @@
+*{
+    font-family: 'Lato'; 
+}        
+
+.mainCont{
+       /* width: 45%; */
+       margin: 7% auto;
+       border: 1 solid silver;
+       box-shadow:1px 1px 5px #888888;
+       border-radius: 10px;
+       background-color: white;
+       padding: 20px 20px;
+}
+
+.innerPro{
+   height: 60px;
+    background-color: white; 
+   border-radius: 10px;
+   font-size: 19px;
+   border: 2 solid silver;
+   box-shadow:1px 1px 5px #888888;
+   color:silver;
+   letter-spacing: 0.1em;
+   font-weight: bolder;
+   line-height: 0.5em
+}
+
+
+legend,label{
+   font-size: 16px;
+   color: #3eb0f7;
+}
+
+.mynavbar{
+   background-color: black;
+   padding-top:0px; 
+}
+
