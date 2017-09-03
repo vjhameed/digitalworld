@@ -3,13 +3,13 @@
 <link href="<?php echo base_url() ?>/assets/css/navbar.css" rel="stylesheet">
 
 <style>
-	.mynavbar {
-		background-color: black;
-		/* padding-top:0px;  */
-	}
+    .mynavbar {
+        background-color: black;
+        /* padding-top:0px;  */
+    }
 
-	* {
-		font-family: 'Lato';
+    * {
+        font-family: 'Lato';
     }
     
     .jumbotron {
@@ -30,23 +30,23 @@
 
 <body>
     <nav class="navbar  mynavbar navbar-default" id="my-nav">
-	<!-- Fixed navbar -->
-	<div class="container">
-		<div class="navbar-header">
-			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
-					aria-expanded="false" aria-controls="navbar">
-				<span class="sr-only">Toggle navigation</span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</button>
-			<a class="navbar-brand" href="<?php echo site_url()?>/auth">Digital World</a>
-		</div>
-		<ul class="nav navbar-nav navbar-right">
-			<li><a href="<?php echo site_url()?>/auth">Home</a></li>
+    <!-- Fixed navbar -->
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="<?php echo site_url()?>/auth">Digital World</a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="<?php echo site_url()?>/auth">Home</a></li>
             <li><a href="#">Contact Us</a></li>
-		</ul>
-	</div><!--/.nav-collapse -->
+        </ul>
+    </div><!--/.nav-collapse -->
 </nav>
 
 <div class="jumbotron jumbotron-sm">
@@ -135,7 +135,6 @@
 
 
 $("#subject").click(()=>{
-
 if($("#subject").val() == "registration"){
     $("#extra").remove();
     $("<div id='extra'></div>").appendTo("#ext");
@@ -150,6 +149,16 @@ if($("#subject").val() == "registration"){
     var formg2 = $("<div></div>").addClass("form-group").appendTo("#extra");
     $("<label></label>").text("5 digit Code").appendTo(formg2);
     $("<input type='text' class='form-control' name='code' placeholder='enter 5 digit easypaisa code' />").appendTo(formg2);
+    var formg4 = $("<div></div>").addClass("form-group").appendTo("#extra");
+    $("<label></label>").text("Amount").appendTo(formg4);
+    $("<input type='number' class='form-control' name='amount' placeholder='enter amount that u have sent' />").appendTo(formg4);
+    var formg2 = $("<div></div>").addClass("form-group").appendTo("#extra");
+    $("<label></label>").text("Payment Method").appendTo(formg2);
+    $("<select id='payment' name='method' required='required' class='form-control'></select>").appendTo(formg2);
+    $("<option value='easypaisa'></option>").text('Easypaisa').appendTo("#payment");
+    $("<option value='ubl omni'></option>").text('Ubl omni').appendTo("#payment");
+    $("<option value='mobi cash'></option>").text('Mobi cash').appendTo("#payment");
+
     var formg3 = $("<div></div>").addClass("form-group").appendTo("#extra");
     $("<label></label>").text("Phone").appendTo(formg3);
     $("<input type='text' class='form-control' name='phone' placeholder='enter phone no' />").appendTo(formg3);

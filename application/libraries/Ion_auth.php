@@ -365,14 +365,14 @@ class Ion_auth
 
 					$this->ion_auth_model->trigger_events(array('post_account_creation', 'post_account_creation_successful', 'activation_email_successful'));
 					$this->set_message('activation_email_successful');
-					// return $id;
+					return $id;
 				}
 
 			}
 
 			$this->ion_auth_model->trigger_events(array('post_account_creation', 'post_account_creation_unsuccessful', 'activation_email_unsuccessful'));
 			$this->set_error('activation_email_unsuccessful');
-			// return FALSE;
+			return FALSE;
 		}
 	}
 

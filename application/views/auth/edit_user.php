@@ -43,8 +43,8 @@
         <div class="col-md-11 col-md-offset-1 mainCont" ><div class="col-md-5"><h2 class="dash">DashBoard</h2></div>
         <div class="col-md-8"><h4 class="amount">Refferal Id : <?php echo $refid?> </h4></div>
         <div class="col-md-8"><h4 class="amount">Amount in Account  </h4></div>
-        <div class="col-md-4 text-right text-success"><span class="afigure"><span class="afig"><?php echo $amount[0]['Amount'];?></span><span style="font-size:0.8em">$</span></span></div>
-        <div class="col-md-8"><h4 class="amount">WithDraw Amount <small>(note:minimum limit to withdraw amount is 10$)</small> </h4></div>
+        <div class="col-md-4 text-right text-success"><span class="afigure"><span class="afig"><?php echo $amount[0]['Amount'];?></span><span style="font-size:0.8em"> Rs</span></span></div>
+        <div class="col-md-8"><h4 class="amount">WithDraw Amount <small>(note:minimum limit to withdraw amount is 2000 rs)</small> </h4></div>
         <div class="col-md-4 text-right"><button class="btn withm btn-lg btn-success">With Draw</button>        </div>
     </div>  
         <div class="col-md-4 mainCont text-center ">
@@ -183,6 +183,13 @@
                       <input type="text" required name="wemail" class="form-control" id="wemail">
                     </div>
                   </div>                  
+                  <div class="form-group"><label>Payment Method</label>
+                    <select id="payment" name="method" required="required" class="form-control">
+                      <option value="easypaisa">Easypaisa</option>
+                      <option value="ubl omni">Ubl omni</option>
+                    <option value="mobi cash">Mobi cash</option>
+                  </select>
+                </div>
                   <div class="form-group">
                     <label for="" class="col-lg-2 Username-label">Phone Number</label>
                     <div class="col-lg-10">
@@ -232,7 +239,7 @@
 
 $(".withm").click((e)=>{
     var amount = $(".afig").text();
-    if(amount >= 10){
+    if(amount >= 2000){
       $('.modal')
     .prop('class', 'modal fade') // revert to default
     .addClass( $(this).data('direction'));
@@ -241,7 +248,7 @@ $(".withm").click((e)=>{
     else{
       $('.withm').text("Sorry the Amount is less than the limit");
     }
-})
+});
 
 $(".withdraw").attr("disabled","disabled");
 $(".cred").blur((e)=>{

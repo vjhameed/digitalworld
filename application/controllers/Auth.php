@@ -107,12 +107,13 @@ class Auth extends CI_Controller {
 		}		
 	}
 
+	// to load the contact us page
 	public function contact(){
 				$this->load->view("auth/contact");			
 	}
 
+	// contact form submitted
 	public function contactUs(){
-
 		if($this->input->post("subject") === "registration"){
 		// if true then payment detail for register are being sent
 			$this->userm->transDetail(1);
@@ -135,6 +136,7 @@ class Auth extends CI_Controller {
 			$this->load->view("auth/transdetail.php",$dat);
 	}
 
+	// to withdraw payment
 	public function withdraw(){
 			$amount = $this->input->post("wamount");
 			$res = $this->userm->withdrawAmount($this->ion_auth->get_user_id(),$amount);
@@ -598,9 +600,11 @@ class Auth extends CI_Controller {
         if ($this->form_validation->run() == true && $this->ion_auth->register($identity, $password, $email, $additional_data))
         {
 			// initialize the account with zero balance
-
 			$this->userm->initilizeAccount($identity);
+
+			// register a waiting transaction to get registered
 			$this->userm->registerTransaction($identity,"1");
+
 			// check to see if we are creating the user
             // redirect them back to the admin page
             $this->session->set_flashdata('message', "Account Created And will be Activated when payment made");

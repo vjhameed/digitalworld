@@ -86,7 +86,7 @@
               <div class="form-group package">
                 <label for="" class="col-lg-2 control-label">Package</label>
                 <div class="col-lg-10">
-                  <input type="radio" required name="package" class="form-control" value="basic" id="package">$2 Basic
+                  <input type="radio" required name="package" class="form-control" value="basic" id="package">Rs 200 Basic
                 </div>
               </div>
               <div class="form-group">
@@ -128,7 +128,7 @@
                       <div class="modal-content">
                         <div class="modal-body">
                            <p style="font-size:18px">Your Account will be activated when we recive the payment of the selected package <small style="font-weight:bold">Note (Contact us through our <a target="blank" href="<?php echo site_url()?>/auth/contact">contact form</a> with the trxid,cnic no,phone no,5 digit code,your email that u have entered to register here and your name)</small></p>
-                           <h4 style="font-weight:bold">Payment Method :<span style="font-weight:600">EasyPaisa</span></h4>                         
+                           <h4 style="font-weight:bold">Payment Method :<span style="font-weight:600">EasyPaisa,Ubl Omni,Mobi Cash</span></h4>                         
                            <h4 style="font-weight:bold">Ph# :<span style="font-weight:600">0345-xxx-xxx-xx</span></h4>                         
                            <h4 style="font-weight:bold">Nic# :<span style="font-weight:600">42401-xxx-xxx-xx</span></h4>                         
                           <h2>Thank You</h2>

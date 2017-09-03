@@ -28,7 +28,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="landing.html">Project name</a>
+            <a class="navbar-brand" href="landing.html">Digital World</a>
         </div>
         <ul class="nav navbar-nav navbar-right">
             <li><a href="#" >Home</a></li>
