@@ -464,6 +464,7 @@ class Auth extends CI_Controller {
 		}
 		else if ($this->ion_auth->is_admin())
 		{
+			$this->userm->refBonus($id);
 			$activation = $this->ion_auth->activate($id);
 		}
 
@@ -753,7 +754,7 @@ class Auth extends CI_Controller {
 			'value' => $this->form_validation->set_value('phone', $user->phone),
 		);
 
-		$this->_render_page('auth/edit_user', $this->data);
+		// $this->_render_page('auth/edit_user', $this->data);
 	}
 
 	// create a new group

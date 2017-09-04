@@ -140,9 +140,6 @@ class userModel extends CI_Model
             $data = array('userid'=>$id,'Amount'=>0.00,'id'=>null);
             $ins = $this->db->insert_string("accounts", $data);
             $this->db->simple_query($ins);
-
-            // giving bonus to parents
-            $this->refBonus($id);
     }
 
     public function withdrawAmount($id, $withdraw)
@@ -176,17 +173,23 @@ class userModel extends CI_Model
 
     public function fetchRefs($id)
     {
-
+        
+        $refferals = array();
         $res = $this->db->get_where('users', "refid = $id");
         $result = $res->result_array();
-        $secreffs = array();
-        foreach ($result as $key => $value) {
-            $ref =  $this->db->get_where("users", "refid = ".$value['id']);
-            $secreffs[] = $ref->result_array();
+        $refferals[0] = $res->result_array();
+        for ($i=0; $i < 7; $i++) {
+            # code...
+            foreach ($refferals[$i] as $key => $value) {
+                $res = $this->db->get_where('users', "refid =".$value['id']);
+                if (!empty($res->result_array())) {
+                    $refferals[$i+1] =  $res->result_array();
+                }
+                # code...
+            }
         }
-        $reffs['firstlevel'] = $res->result_array();
-        $reffs['secondlevel'] = $secreffs;
-        return $reffs;
+        var_dump($refferals);
+        // return $reffs;
     }
 
     public function refBonus($id)

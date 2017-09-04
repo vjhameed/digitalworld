@@ -37,17 +37,8 @@
                         </ul>
                     </div><!--/.nav-collapse -->
                 
-                </nav>
-                
-    <div class="row-fluid">
-        <div class="col-md-11 col-md-offset-1 mainCont" ><div class="col-md-5"><h2 class="dash">DashBoard</h2></div>
-        <div class="col-md-8"><h4 class="amount">Refferal Id : <?php echo $refid?> </h4></div>
-        <div class="col-md-8"><h4 class="amount">Amount in Account  </h4></div>
-        <div class="col-md-4 text-right text-success"><span class="afigure"><span class="afig"><?php echo $amount[0]['Amount'];?></span><span style="font-size:0.8em"> Rs</span></span></div>
-        <div class="col-md-8"><h4 class="amount">WithDraw Amount <small>(note:minimum limit to withdraw amount is 2000 rs)</small> </h4></div>
-        <div class="col-md-4 text-right"><button class="btn withm btn-lg btn-success">With Draw</button>        </div>
-    </div>  
-        <div class="col-md-4 mainCont text-center ">
+                </nav>                
+        <div class="col-md-2 leftside ">
             <img src="<?php echo $company['src']?>" class="profileimg img-responsive img-thumbnail">
             <div class="row">
                 <div class="userData col-md-11">
@@ -120,8 +111,20 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-3 mainCont totalLinks">
-                <h2>First Level Refferals</h2>
+
+        <div class="row-fluid">
+          <div class="col-md-10 dashboard" ><div class="col-md-5"><h2 class="dash">DashBoard</h2></div>
+            <div class="col-md-8"><h4 class="amount">Refferal Id : <?php echo $refid?> </h4></div>
+            <div class="col-md-8"><h4 class="amount">Amount in Account  </h4></div>
+            <div class="col-md-4 text-right text-success"><span class="afigure"><span class="afig"><?php echo $amount[0]['Amount'];?></span><span style="font-size:0.8em"> Rs</span></span></div>
+            <div class="col-md-8"><h4 class="amount">WithDraw Amount <small>(note:minimum limit to withdraw amount is 2000 rs)</small> </h4></div>
+            <div class="col-md-4 text-right"><button class="btn withm btn-lg btn-success">With Draw</button>      
+          </div>
+        </div>  
+
+
+        <div class="col-md-2 mainCont totalLinks">
+                <h2 class="text-center">First Level Refferals</h2>
               <?php foreach ($refs['firstlevel'] as $key => $value) {?>
                 <div class="link">
                          <img class="postimage" src="<?php echo base_url() ?>assets/images/<?php echo $value['company']?>" alt="Link Image"> 
@@ -134,8 +137,8 @@
             </div>
         </div>
 
-        <div class="col-md-4 mainCont totalLinks">
-                <h2>Second Level Refferals</h2>
+        <div class="col-md-2 mainCont totalLinks">
+                <h2 class="text-center">Second Level Refferals</h2>
              <?php foreach ($refs['secondlevel'] as $key => $val) { 
                        foreach ($val as $key => $value) {?>
                  <div class="link">
