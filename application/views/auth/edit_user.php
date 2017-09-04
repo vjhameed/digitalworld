@@ -126,6 +126,7 @@
         </div>  
 
 
+    <?php if (!empty($refs)) { ?>
           <div class="col-md-2 mainCont totalLinks">
                 <h2 class="text-center">First Level Refferals</h2>
                 <?php foreach ($refs[0] as $key => $value) {   ?>
@@ -134,9 +135,9 @@
                         <h3>Name :<small><?php echo $value['first_name'].$value['last_name'];?></small>
                         <?php if ($value['active'] ==  0) {
                             echo  '<span class="btn btn-default btn-circle-red"></span></h3>' ;
-                        } else {
-                            echo  '<span class="btn btn-default btn-circle-green"></span></h3>' ;
-                        }
+} else {
+    echo  '<span class="btn btn-default btn-circle-green"></span></h3>' ;
+}
                         ?>
                         <h3>User Name :<small><?php echo $value['username'];?></small></h3>
                         <h3>Email :<small><?php echo $value['email'];?></small></h3>
@@ -154,9 +155,9 @@
                         <h3>Name :<small><?php echo $value['first_name'].$value['last_name'];?></small>
                         <?php if ($value['active'] ==  0) {
                             echo  '<span class="btn btn-default btn-circle-red"></span></h3>' ;
-                        } else {
-                            echo  '<span class="btn btn-default btn-circle-green"></span></h3>' ;
-                        }
+} else {
+    echo  '<span class="btn btn-default btn-circle-green"></span></h3>' ;
+}
                         ?>
                         <h3>User Name :<small><?php echo $value['username'];?></small></h3>
                         <h3>Email :<small><?php echo $value['email'];?></small></h3>
@@ -174,9 +175,9 @@
                         <h3>Name :<small><?php echo $value['first_name'].$value['last_name'];?></small>
                         <?php if ($value['active'] ==  0) {
                             echo  '<span class="btn btn-default btn-circle-red"></span></h3>' ;
-                        } else {
-                            echo  '<span class="btn btn-default btn-circle-green"></span></h3>' ;
-                        }
+} else {
+    echo  '<span class="btn btn-default btn-circle-green"></span></h3>' ;
+}
                         ?>
                         <h3>User Name :<small><?php echo $value['username'];?></small></h3>
                         <h3>Email :<small><?php echo $value['email'];?></small></h3>
@@ -194,10 +195,9 @@
                         <h3>Name :<small><?php echo $value['first_name'].$value['last_name'];?></small>
                         <?php if ($value['active'] ==  0) {
                             echo  '<span class="btn btn-default btn-circle-red"></span></h3>' ;
-                        } else {
-                            echo  '<span class="btn btn-default btn-circle-green"></span></h3>' ;
-                        }
-                        ?>
+} else {
+    echo  '<span class="btn btn-default btn-circle-green"></span></h3>' ;
+}?>
                         <h3>User Name :<small><?php echo $value['username'];?></small></h3>
                         <h3>Email :<small><?php echo $value['email'];?></small></h3>
                         <h3>Country :<small><?php echo $value['country'];?></small></h3>
@@ -214,10 +214,9 @@
                         <h3>Name :<small><?php echo $value['first_name'].$value['last_name'];?></small>
                         <?php if ($value['active'] ==  0) {
                             echo  '<span class="btn btn-default btn-circle-red"></span></h3>' ;
-                        } else {
-                            echo  '<span class="btn btn-default btn-circle-green"></span></h3>' ;
-                        }
-                        ?>
+} else {
+    echo  '<span class="btn btn-default btn-circle-green"></span></h3>' ;
+}                        ?>
                         <h3>User Name :<small><?php echo $value['username'];?></small></h3>
                         <h3>Email :<small><?php echo $value['email'];?></small></h3>
                         <h3>Country :<small><?php echo $value['country'];?></small></h3>
@@ -234,9 +233,9 @@
                         <h3>Name :<small><?php echo $value['first_name'].$value['last_name'];?></small>
                         <?php if ($value['active'] ==  0) {
                             echo  '<span class="btn btn-default btn-circle-red"></span></h3>' ;
-                        } else {
-                            echo  '<span class="btn btn-default btn-circle-green"></span></h3>' ;
-                        }
+} else {
+    echo  '<span class="btn btn-default btn-circle-green"></span></h3>' ;
+}
                         ?>
                         <h3>User Name :<small><?php echo $value['username'];?></small></h3>
                         <h3>Email :<small><?php echo $value['email'];?></small></h3>
@@ -254,9 +253,9 @@
                         <h3>Name :<small><?php echo $value['first_name'].$value['last_name'];?></small>
                         <?php if ($value['active'] ==  0) {
                             echo  '<span class="btn btn-default btn-circle-red"></span></h3>' ;
-                        } else {
-                            echo  '<span class="btn btn-default btn-circle-green"></span></h3>' ;
-                        }
+} else {
+    echo  '<span class="btn btn-default btn-circle-green"></span></h3>' ;
+}
                         ?>
                         <h3>User Name :<small><?php echo $value['username'];?></small></h3>
                         <h3>Email :<small><?php echo $value['email'];?></small></h3>
@@ -265,7 +264,8 @@
                 </div>
                 <?php }?>
            </div>
-
+    <?php }?>
+    
         <!-- Modal -->
       <div id="myModal" class="modal fade" role="dialog">
         <div class="modal-dialog">

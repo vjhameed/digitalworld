@@ -177,30 +177,32 @@ class userModel extends CI_Model
         $refferals = array();
         $res = $this->db->get_where('users', "refid = $id");
         $result = $res->result_array();
-        $refferals[0] = $res->result_array();
-        for ($i=0; $i < 7; $i++) {
-            # code...
-            foreach ($refferals[$i] as $key => $value) {
-                $res = $this->db->get_where('users', "refid =".$value['id']);
-                if (!empty($res->result_array())) {
-                    $refferals[$i+1] =  $res->result_array();
-                }
+        if (!empty($res->result_array())) {
+            $refferals[0] = $res->result_array();
+            for ($i=0; $i < 7; $i++) {
                 # code...
+                foreach ($refferals[$i] as $key => $value) {
+                    $res = $this->db->get_where('users', "refid =".$value['id']);
+                    if (!empty($res->result_array())) {
+                        $refferals[$i+1] =  $res->result_array();
+                    }
+                    # code...
+                }
+            }
+        
+
+            // to replace the refid of each ref with the name of the reffered by
+
+            foreach ($refferals as & $parent) {
+                foreach ($parent as & $value) {
+                    $this->db->select("username");
+                    $res = $this->db->get_where('users', "id = ".$value['refid']);
+                    $result = $res->result_array();
+                    $value['refid'] =  $result[0]['username'];
+                }
             }
         }
-
-// to replace the refid of each ref with the name of the reffered by 
-
-        foreach ($refferals as & $parent) {
-            foreach ($parent as & $value) {
-                $this->db->select("username");
-                $res = $this->db->get_where('users', "id = ".$value['refid']);
-                $result = $res->result_array();
-                $value['refid'] =  $result[0]['username'];
-            }
-        }
-
-        // var_dump($refferals);
+           // var_dump($refferals);
         return $refferals;
     }
 
