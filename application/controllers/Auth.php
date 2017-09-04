@@ -754,7 +754,8 @@ class Auth extends CI_Controller {
 			'value' => $this->form_validation->set_value('phone', $user->phone),
 		);
 
-		// $this->_render_page('auth/edit_user', $this->data);
+		// var_dump($this->data['refs']);
+		$this->_render_page('auth/edit_user', $this->data);
 	}
 
 	// create a new group

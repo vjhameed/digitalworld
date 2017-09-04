@@ -188,8 +188,20 @@ class userModel extends CI_Model
                 # code...
             }
         }
-        var_dump($refferals);
-        // return $reffs;
+
+// to replace the refid of each ref with the name of the reffered by 
+
+        foreach ($refferals as & $parent) {
+            foreach ($parent as & $value) {
+                $this->db->select("username");
+                $res = $this->db->get_where('users', "id = ".$value['refid']);
+                $result = $res->result_array();
+                $value['refid'] =  $result[0]['username'];
+            }
+        }
+
+        // var_dump($refferals);
+        return $refferals;
     }
 
     public function refBonus($id)

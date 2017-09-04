@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 26, 2017 at 02:47 PM
+-- Generation Time: Sep 04, 2017 at 10:16 AM
 -- Server version: 5.7.14
 -- PHP Version: 7.0.10
 
@@ -37,6 +37,26 @@ CREATE TABLE `accounts` (
 --
 
 INSERT INTO `accounts` (`id`, `userid`, `Amount`) VALUES
+(53, 96, 0),
+(52, 95, 0),
+(51, 94, 0),
+(50, 93, 0),
+(49, 92, 40),
+(48, 91, 76),
+(46, 89, 126),
+(47, 90, 106),
+(44, 87, 142),
+(42, 85, 198),
+(43, 86, 152),
+(40, 83, 274),
+(39, 82, 0),
+(38, 81, 0),
+(37, 80, 0.8),
+(36, 79, 0.8),
+(35, 78, 0),
+(34, 77, 0),
+(33, 76, 0),
+(32, 75, 9),
 (27, 70, 0),
 (28, 71, 0),
 (29, 72, 0),
@@ -61,7 +81,7 @@ ALTER TABLE `accounts`
 -- AUTO_INCREMENT for table `accounts`
 --
 ALTER TABLE `accounts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

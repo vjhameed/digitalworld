@@ -2,7 +2,7 @@
         <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>/assets/css/land.css">
         <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>/assets/css/navbar.css">
                 
-        <link href="../fonts/glyphicons-halflings-regular.woff2">
+        <link href="<?php echo base_url()?>/assets/css/glyphicons-halflings-regular.woff2">
                 <!-- Google Fonts -->
                 <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic" />
         <style>
