@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 04, 2017 at 10:16 AM
+-- Generation Time: Sep 06, 2017 at 01:40 PM
 -- Server version: 5.7.14
 -- PHP Version: 7.0.10
 
@@ -35,13 +35,6 @@ CREATE TABLE `withdrawtrans` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `withdrawtrans`
---
-
-INSERT INTO `withdrawtrans` (`id`, `transid`, `cnic`, `phone`, `method`) VALUES
-(2, 32, 42401, 32121, '');
-
---
 -- Indexes for dumped tables
 --
 
@@ -59,7 +52,7 @@ ALTER TABLE `withdrawtrans`
 -- AUTO_INCREMENT for table `withdrawtrans`
 --
 ALTER TABLE `withdrawtrans`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

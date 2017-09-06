@@ -119,7 +119,7 @@
             <div class="col-md-8"><h4 class="amount">Refferal Id : <?php echo $refid?> </h4></div>
             <div class="col-md-8"><h4 class="amount">Amount in Account  </h4></div>
             <div class="col-md-4 text-right text-success"><span class="afigure"><span class="afig"><?php echo $amount[0]['Amount'];?></span><span style="font-size:0.8em"> Rs</span></span></div>
-            <div class="col-md-8"><h4 class="amount">WithDraw Amount <small>(note:minimum limit to withdraw amount is 2000 rs)</small> </h4></div>
+            <div class="col-md-8"><h4 class="amount">WithDraw Amount <small>(note:minimum limit to withdraw amount is 300 Rs)</small> </h4></div>
             <div class="col-md-4 text-right"><button class="btn withm btn-lg btn-success">With Draw</button></div>      
             <div class="col-md-8"><h4 class="amount"><small>(note:In refferals red means inactive and green means active)</small> </h4></div>
           </div>
@@ -300,12 +300,14 @@
                       <input type="text" required name="wemail" class="form-control" id="wemail">
                     </div>
                   </div>                  
-                  <div class="form-group"><label>Payment Method</label>
-                    <select id="payment" name="method" required="required" class="form-control">
-                      <option value="easypaisa">Easypaisa</option>
-                      <option value="ubl omni">Ubl omni</option>
-                    <option value="mobi cash">Mobi cash</option>
-                  </select>
+                  <div class="form-group"><label class="col-lg-2 email-label">Payment Method</label>
+                    <div class="col-lg-10">
+                      <select id="payment" name="method" required="required" class="form-control">
+                        <option value="easypaisa">Easypaisa</option>
+                        <option value="ubl omni">Ubl omni</option>
+                        <option value="mobi cash">Mobi cash</option>
+                      </select>                    
+                    </div>
                 </div>
                   <div class="form-group">
                     <label for="" class="col-lg-2 Username-label">Phone Number</label>
@@ -316,7 +318,7 @@
                   <div class="form-group">
                     <label for="" class="col-lg-2 Username-label">Amount</label>
                     <div class="col-lg-10">
-                      <input type="number" required min=1  max=<?php echo$amount[0]['Amount']?> name="wamount" class="form-control" id="wamount">
+                      <input type="number" required min=300  max=<?php echo$amount[0]['Amount']?> name="wamount" class="form-control" id="wamount">
                     </div>
                   </div> 
                   <div class="form-group">
@@ -356,7 +358,7 @@
 
 $(".withm").click((e)=>{
     var amount = $(".afig").text();
-    if(amount >= 2000){
+    if(amount >= 300){
       $('.modal')
     .prop('class', 'modal fade') // revert to default
     .addClass( $(this).data('direction'));
@@ -370,10 +372,10 @@ $(".withm").click((e)=>{
 $(".withdraw").attr("disabled","disabled");
 $(".cred").blur((e)=>{
   e.preventDefault();
-  $.post("<?php echo site_url()?>/auth/checkCredentional",{remember:1,identity:$("#wusername").val(),password:$("#wpassword").val()},(data)=>{
+  $.post("<?php echo site_url()?>/auth/checkCredentional",{type:2,remember:1,identity:$("#wusername").val(),password:$("#wpassword").val()},(data)=>{
   if(data === "success"){
   $(".withdraw").removeAttr("disabled");
-  $("#logError").text("Requested amount will be sent to you soon").attr("class","logsu bg bg-success");
+  $("#logError").text("Click the With Draw button and the amount will be sent to you soon").attr("class","logsu bg bg-success");
   }
   else{
     $("#logError").text("UserName OR Password incorrect").attr("class","logEr bg bg-danger");

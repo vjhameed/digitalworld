@@ -116,8 +116,12 @@ class Auth extends CI_Controller {
 	public function contactUs(){
 		if($this->input->post("subject") === "registration"){
 		// if true then payment detail for register are being sent
-			$this->userm->transDetail(1);
-			redirect("auth/contact");
+		$result = $this->userm->transDetail(1);
+			if($result == true)
+			redirect("auth/login");
+			else {
+				redirect("auth/contact");
+			}
 			// then send the details to admin
 		}
 		else{

@@ -134,7 +134,7 @@
 <script>
 
 
-$("#subject").click(()=>{
+$("#subject").change(()=>{
 if($("#subject").val() == "registration"){
     $("#extra").remove();
     $("<div id='extra'></div>").appendTo("#ext");
@@ -142,13 +142,13 @@ if($("#subject").val() == "registration"){
     $("#extra").addClass("col-md-6");
     var formg = $("<div></div>").addClass("form-group").appendTo("#extra");
     $("<label></label>").text("trxId").appendTo(formg);
-    $("<input type='text' class='form-control' name='trxid' placeholder='enter trxid' />").appendTo(formg);
+    $("<input type='number' class='form-control' name='trxid' placeholder='enter trxid' />").appendTo(formg);
     var formg1 = $("<div></div>").addClass("form-group").appendTo("#extra");
     $("<label></label>").text("Cnic").appendTo(formg1);
     $("<input type='text' class='form-control' name='cnic' placeholder='enter cnic no' />").appendTo(formg1);
     var formg2 = $("<div></div>").addClass("form-group").appendTo("#extra");
     $("<label></label>").text("5 digit Code").appendTo(formg2);
-    $("<input type='text' class='form-control' name='code' placeholder='enter 5 digit easypaisa code' />").appendTo(formg2);
+    $("<input type='number' class='form-control' name='code' placeholder='enter 5 digit easypaisa code' />").appendTo(formg2);
     var formg4 = $("<div></div>").addClass("form-group").appendTo("#extra");
     $("<label></label>").text("Amount").appendTo(formg4);
     $("<input type='number' class='form-control' name='amount' placeholder='enter amount that u have sent' />").appendTo(formg4);
@@ -161,7 +161,7 @@ if($("#subject").val() == "registration"){
 
     var formg3 = $("<div></div>").addClass("form-group").appendTo("#extra");
     $("<label></label>").text("Phone").appendTo(formg3);
-    $("<input type='text' class='form-control' name='phone' placeholder='enter phone no' />").appendTo(formg3);
+    $("<input type='number' class='form-control' name='phone' placeholder='enter phone no' />").appendTo(formg3);
 }
 else{
     $("#extra").css("display","none");

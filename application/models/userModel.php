@@ -116,6 +116,7 @@ class userModel extends CI_Model
         } elseif ($type == 2) {
             $data = array('transid'=>$transid,'trx'=>0,'method'=>'','cnic'=>0,'phone'=>0,'code'=>0,'id'=>null);
             $this->db->insert('registertrans', $data);
+            return true;
         } elseif ($type ==3) {
             $data = array('method'=>$this->input->post('method'),'transid'=>$transid,'cnic'=>$this->input->post("wcnic"),'phone'=>$this->input->post("wphone"),'id'=>null);
             $this->db->insert('withdrawtrans', $data);
@@ -151,11 +152,11 @@ class userModel extends CI_Model
         $res = $this->db->get_where("accounts", "userid = $id");
         $result = $res->result_array();
         $amount = $result[0]['Amount'];
-        $amount -= $amount - $withdraw;
+        $amount = $amount - $withdraw;
         $dat = array("Amount"=>$amount);
         $this->db->update("accounts", $dat, "userid = $id");
         
-// insert a withdraw transaction
+// // insert a withdraw transaction
         
         $this->db->select("username");
         $res = $this->db->get_where("users", "id = $id");
