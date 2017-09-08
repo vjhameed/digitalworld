@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 06, 2017 at 01:40 PM
+-- Generation Time: Sep 08, 2017 at 11:31 AM
 -- Server version: 5.7.14
 -- PHP Version: 7.0.10
 
@@ -38,7 +38,16 @@ CREATE TABLE `users_groups` (
 
 INSERT INTO `users_groups` (`id`, `user_id`, `group_id`) VALUES
 (1, 1, 1),
-(2, 1, 2);
+(2, 1, 2),
+(6, 5, 2),
+(7, 6, 2),
+(8, 7, 2),
+(9, 8, 2),
+(10, 9, 2),
+(11, 10, 2),
+(12, 11, 2),
+(13, 12, 2),
+(14, 13, 2);
 
 --
 -- Indexes for dumped tables
@@ -61,7 +70,7 @@ ALTER TABLE `users_groups`
 -- AUTO_INCREMENT for table `users_groups`
 --
 ALTER TABLE `users_groups`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=100;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 --
 -- Constraints for dumped tables
 --

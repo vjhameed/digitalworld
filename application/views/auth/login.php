@@ -11,6 +11,7 @@
             color:red;
           }
 
+
           .logsu{
             padding:5px;
           }
@@ -28,101 +29,89 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="landing.html">Digital World</a>
+            <a class="navbar-brand" href="#">Digital World</a>
         </div>
-        <ul class="nav navbar-nav navbar-right">
-            <li><a href="#" >Home</a></li>
-            <li><a href="<?php echo site_url()?>/auth/create_user">Register</a></li>
-            <li><a href="#" >About Us</a></li>            
-            <li><a href="#" >Store Comming Soon</a></li>
-        </ul>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#" >Home</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Login<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                    <li><a class="log" href="#">Login</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#">How it Works</a></li>
+                    <li><a href="<?php echo site_url()?>/auth/contact">Contact Us</a></li>
+                    </ul>
+                </li>
+                <li><a href="<?php echo site_url()?>/auth/create_user">Register</a></li>
+                <li><a href="#" >About Us</a></li>            
+                <li><a href="#" >Store Comming Soon</a></li>
+            </ul>
+        </div>
     </div><!--/.nav-collapse -->
-
 </nav>
 
 <br>
 <div class="container" id="wrapper">
     <div class="row">
-        <div class="col-sm-2 col-md-2">
-            <div id="blog-sidebar" data-spy="affix" data-offset-top="80" data-offset-bottom="620">
+        <div class="col-sm-1 col-md-3">
+            <div id="blog-sidebar" >
                 <div class="welcome-msg col-md-10 asideleft text-center">
-                <a href="#" class="log btn access" data-direction='top-right'><span class="glyphicon glyphicon-user"></span> Log In</a>
+                <a href="#" class="log btn access"><span class="glyphicon glyphicon-user"></span> Log In</a>
                 <a href="<?php echo site_url()?>/auth/create_user" class="btn access"><span class="glyphicon glyphicon-registration-mark"></span> Register</a>                
                 <a href="<?php echo site_url()?>/auth/contact" class="btn access"><span class="glyphicon glyphicon-comment"></span> Contact Us</a>              
                 <button type="" class="btn access btn-lg btn-success">How It Works</button>                                        
                 </div>
             </div>
         </div>
-        <div class="col-sm-8 col-md-9 blog-main" style="margin-left: 3%">
+        <div class="col-sm-12 col-md-8 blog-main">
             <div id="blog-main">
                 <div class="col-md-12 newLink">
                   <h1 class="message"><?php echo $message;?></h1>
                   <img src="<?php echo base_url()?>/assets/images/bghome.jpg" class="img-responsive banner" alt="">
                 </div>
 
-                <div class="mainContent col-md-3 col-sm-4">
+                <div class="mainContent col-md-3 col-xs-5 col-sm-5">
+                <a href="#"><img src="<?php echo base_url() ?>/assets/html/assests/230x142.png" width="100%"></a>
+                <div class="mainContentDescription">
+                    <div class="row sellerInfo">
+                        <div class="col-md-12">
+                            <h3><a href="#">Users Signed up today : <?php echo $data['users'] + 100?></a></h3>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="gig-end">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mainContent col-md-3 col-xs-5 col-sm-5">
+                <a href="#"><img src="<?php echo base_url() ?>/assets/html/assests/230x142.png" width="100%"></a>
+                <div class="mainContentDescription">
+                    <div class="row sellerInfo">
+                        <div class="col-md-12">
+                            <h3><a href="#">Total Users Signed Up : <?php echo $data['users'] + 500?></a></h3>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="gig-end">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+                <div class="mainContent col-md-3 col-xs-5 col-sm-5">
                     <a href="#" ><img src="<?php echo base_url()?>/assets/html/assests/230x142.png" width="100%"></a>
                         <div class="mainContentDescription">
                             <div class="row sellerInfo">
                                 <div class="col-md-12">
-                                    <h3><a href="#">Users Signed up today</a></h3>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="gig-end">
-                                    </div>
+                                    <h3><a href="#">Total WithDrawals : <?php echo $data['amount']?></a></h3>
                                 </div>
                             </div>
                         </div>
                 </div>
-
-                <div class="mainContent col-md-3 col-sm-4">
-                    <a href="#" ><img src="<?php echo base_url()?>/assets/html/assests/230x142.png" width="100%"></a>
-                        <div class="mainContentDescription">
-                            <div class="row sellerInfo">
-                                <div class="col-md-12">
-                                    <h3><a href="#">Total Users</a></h3>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="gig-end">
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                </div>
-
-                
-                <div class="mainContent col-md-3 col-sm-4">
-                    <a href="#" ><img src="<?php echo base_url()?>/assets/html/assests/230x142.png" width="100%"></a>
-                        <div class="mainContentDescription">
-                            <div class="row sellerInfo">
-                                <div class="col-md-12">
-                                    <h3><a href="#">Total WithDrawals</a></h3>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="gig-end">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                </div>
-                
-                <div class="mainContent col-md-3 col-sm-4">
-                       <a href="#" ><img src="<?php echo base_url()?>/assets/html/assests/230x142.png" width="100%"></a>
-                       <div class="mainContentDescription">
-                            <div class="row sellerInfo">
-                                <div class="col-md-12">
-                                    <h3><a href="#">Upcoming News</a></h3>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="gig-end">
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                </div>
-
 
 
             </div>
@@ -188,15 +177,23 @@ $('.modal').modal('show');
 $("#login").click((e)=>{
   e.preventDefault();
 $.post("<?php echo site_url()?>/auth/checkCredentional",{remember:$("#remember").val(),identity:$("#inputEmail").val(),password:$("#inputPassword").val()},(data)=>{
-  if(data === "success"){
+	  if( data === "success"){
         $("#logError").text("You will be Logged in a while").attr("class","logsu bg bg-success");
         window.location.reload();
   }
   else{
         $("#logError").text("Username or Password is Incorrect").attr("class","logEr bg bg-danger");
   }
-});
 })
+});
+
+
+if($(window).width() < 500 ){
+    console.log("less");
+$(".welcome-msg").css("display","none");
+
+}
+
 
 
 </script>

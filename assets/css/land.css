@@ -10,10 +10,6 @@
     border-radius: 0px;
 }
 
-#wrapper {
-    width: 90%;
-}
-
 #blog-header {
     color: black;
     text-align: right;
@@ -21,17 +17,12 @@
 }
 
 #blog-main {
-    /*width: 68%;*/
-    height: 500px;
     padding: 0;
     margin-right: 5px;
 }
 
 #blog-sidebar {
     background-color: white;
-    /*width: 30.9%;*/
-    width: 222px;
-    height: 300px;
     margin-top: -3px;
     padding: 0px 0px 20px 0px;
 }
@@ -40,128 +31,98 @@
     position: fixed;
     top: 40px;
 }
+
 .affix-top {
     position: static;
 }
+
 .affix-bottom {
     position: absolute;
 }
 
 #blog-footer {
     background-color: black;
-    color:silver;
+    color: silver;
     padding: 15px;
 }
 
-.asideleft{
+.asideleft {
     border: 1px #e5e5e5 solid;
-     /* padding: 15px 10px;  */
-    padding-top: 0px; 
+    padding-top: 0px;
     margin-top: 20px;
 }
 
-
-.asideleft h3{
+.asideleft h3 {
     letter-spacing: -0.5px;
     font-size: 1em;
     font-weight: 600;
     margin-bottom: 10px;
 }
 
-.asideleft p {
-    font-size: 14px;
+.asideleft {
+    font-size: 1em;
     line-height: 18px;
 }
 
-.mainContent{
-     width: 23.5%; 
-     margin-left: 13px;  
+.mainContent {
+    margin-left: 15px;
     margin-bottom: 20px;
     border: 1px solid #b2b2b2;
     padding: 0;
 }
 
-
-.mainContentDescription{
+.mainContentDescription {
     margin: 3px 7px;
-    padding:0;
+    padding: 0;
 }
 
-
-.gig-end{
-    border-top:1px solid #b2b2b2;
-    margin-top: 10px;
-    padding: 10px 4px;
-}
-
-.gig-end .glyphicon{
-    font-size: 1.7em;
-    color: #b2b2b2;
-}
-
-.gig-sub-end{
-    font-size: 1.4em;
-    display: inline-block;
-    padding-left: 35px;
-    color: #00B22D;
-
-}
-
-.gig-end strong {
-    color: #00B22D;
-    font-size: 2em;
-}
-
-#wrapper{
+#wrapper {
     padding-top: 30px;
 }
 
-.mainContent a:hover{
+.mainContent a:hover {
     color: silver;
 }
 
-.navbar-form .input-group{
+.navbar-form .input-group {
     width: 40%;
 }
 
-.newLink{
+.newLink {
     border-radius: 10px;
-    margin: 20px auto;
-    margin-left: 15px;
-    padding:0px;
-    box-shadow:1px 1px 5px #888888;
+    margin: 20px 5px;
+    /* margin-left: 15px; */
+    padding: 0px;
+    box-shadow: 1px 1px 5px #888888;
 }
 
-.btn{
-    font-size: 15px;
-    padding:5px 35px;
-    color:#3eb0f7;
+.btn {
+    font-size: 1em;
+    padding: 5px 5px;
+    color: #3eb0f7;
     border-radius: 100px;
     border-width: 3px;
     border-color: #3eb0f7;
     font-weight: 600;
-    border-color: 3eb0f7;
     background: inherit;
-    margin: 10px 15px;
+    margin: 5px 5px;
     transition: all 0.4s;
-
 }
 
-.btn:hover{
+.btn:hover {
     background-color: #3eb0f7;
     color: white;
 }
 
 .access {
-    width: 100%;
-    margin-left: -0px;
+    width: 80%;
+    /* margin-left: -0px; */
 }
 
-.banner{
-    /* width: 90%;
-    height: 15%; */
-}
-
-.message{
+.message {
     color: #3eb0f7;
+}
+
+.sellerinfo h3 {
+    font-size: 1.4em;
 }

@@ -103,13 +103,25 @@ class Auth extends CI_Controller {
 				$data['id']=$this->ion_auth->get_user_id();
 				$dat['user']=$this->ion_auth->user($data['id'])->row();
 				$dat['users'] = $this->userm->fetchUsers();
-				$this->load->view("auth/loggedin",$dat);			
+				$dat['data'] = $this->userm->fetchlandinfo();
+				$this->load->view("auth/loggedin",$dat);
 		}		
 	}
+
 
 	// to load the contact us page
 	public function contact(){
 				$this->load->view("auth/contact");			
+	}
+
+	function getmsg(){
+		$dat['data'] = $this->userm->getmsg();
+		$this->load->view("auth/msgs",$dat);
+	}
+
+	function readmsg($id){
+		$this->userm->completemsg($id);
+		redirect("auth/login");
 	}
 
 	// contact form submitted
@@ -125,8 +137,9 @@ class Auth extends CI_Controller {
 			// then send the details to admin
 		}
 		else{
-			redirect("auth/contact");
-			// send an email with the message of the user to the admin
+			// send to msg table with the message of the user to the admin
+			$this->userm->setmsg();
+			redirect("auth/login");
 		}
 	}
 
@@ -163,6 +176,7 @@ class Auth extends CI_Controller {
 	// log the user in
 	public function login()
 	{
+		
 	
 		if ($this->ion_auth->logged_in())
 		{
@@ -212,6 +226,8 @@ class Auth extends CI_Controller {
 				'id'   => 'password',
 				'type' => 'password',
 			);
+			
+			$this->data['data'] = $this->userm->fetchlandinfo();
 			$this->_render_page('auth/login', $this->data);
 		}
 	}
@@ -607,6 +623,9 @@ class Auth extends CI_Controller {
 			// initialize the account with zero balance
 			$this->userm->initilizeAccount($identity);
 
+			//initializw the level earnings
+			$this->userm->initilizeEarnings($identity);
+
 			// register a waiting transaction to get registered
 			$this->userm->registerTransaction($identity,"1");
 
@@ -743,6 +762,8 @@ class Auth extends CI_Controller {
 		$this->data['city'] = $user->city;
 		$this->data['amount'] = $this->userm->fetchAmount($id);
 		$this->data['refs'] = $this->userm->fetchrefs($id);
+		$this->data['levelE'] = $this->userm->fetchLevelEarning($user->id);
+
 		$this->data['first_name'] = array(
 			'value' => $this->form_validation->set_value('first_name', $user->first_name)
 		);
@@ -754,11 +775,13 @@ class Auth extends CI_Controller {
 		$this->data['company'] = array(
 			'src' => $img,
 		);
+
+
 		$this->data['phone'] = array(
 			'value' => $this->form_validation->set_value('phone', $user->phone),
 		);
 
-		// var_dump($this->data['refs']);
+//		 var_dump($this->data['levelE']);
 		$this->_render_page('auth/edit_user', $this->data);
 	}
 

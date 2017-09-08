@@ -23,38 +23,35 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `accounts`
+-- Table structure for table `messages`
 --
 
-CREATE TABLE `accounts` (
+CREATE TABLE `messages` (
   `id` int(11) NOT NULL,
-  `userid` int(11) NOT NULL,
-  `Amount` double NOT NULL
+  `userEmail` text NOT NULL,
+  `subject` text NOT NULL,
+  `body` text NOT NULL,
+  `date` date NOT NULL,
+  `userName` text NOT NULL,
+  `status` text NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `accounts`
+-- Dumping data for table `messages`
 --
 
-INSERT INTO `accounts` (`id`, `userid`, `Amount`) VALUES
-(67, 13, 0),
-(66, 12, 0),
-(65, 11, 40),
-(64, 10, 76),
-(63, 9, 106),
-(62, 8, 126),
-(61, 7, 142),
-(60, 6, 152),
-(59, 5, 158);
+INSERT INTO `messages` (`id`, `userEmail`, `subject`, `body`, `date`, `userName`, `status`) VALUES
+(4, 'vjhameed3@gmail.com', 'product', 'this is a compalint', '2017-09-08', 'hameed', 'complete'),
+(5, 'vjhameed3@gmail.com', 'product', 'this is a compalint', '2017-09-08', 'hameed', 'complete');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `accounts`
+-- Indexes for table `messages`
 --
-ALTER TABLE `accounts`
+ALTER TABLE `messages`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -62,10 +59,10 @@ ALTER TABLE `accounts`
 --
 
 --
--- AUTO_INCREMENT for table `accounts`
+-- AUTO_INCREMENT for table `messages`
 --
-ALTER TABLE `accounts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
+ALTER TABLE `messages`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

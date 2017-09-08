@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 06, 2017 at 01:40 PM
+-- Generation Time: Sep 08, 2017 at 11:30 AM
 -- Server version: 5.7.14
 -- PHP Version: 7.0.10
 
@@ -38,6 +38,24 @@ CREATE TABLE `registertrans` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
+-- Dumping data for table `registertrans`
+--
+
+INSERT INTO `registertrans` (`id`, `transid`, `trx`, `cnic`, `phone`, `code`, `method`, `amount`) VALUES
+(30, 59, 0, '0', '0', 0, '', 0),
+(31, 60, 0, '0', '0', 0, '', 0),
+(32, 62, 0, '0', '0', 0, '', 0),
+(33, 63, 0, '0', '0', 0, '', 0),
+(34, 64, 0, '0', '0', 0, '', 0),
+(35, 65, 0, '0', '0', 0, '', 0),
+(36, 66, 0, '0', '0', 0, '', 0),
+(37, 67, 0, '0', '0', 0, '', 0),
+(38, 68, 0, '0', '0', 0, '', 0),
+(39, 69, 0, '0', '0', 0, '', 0),
+(40, 70, 0, '0', '0', 0, '', 0),
+(41, 71, 0, '0', '0', 0, '', 0);
+
+--
 -- Indexes for dumped tables
 --
 
@@ -55,7 +73,7 @@ ALTER TABLE `registertrans`
 -- AUTO_INCREMENT for table `registertrans`
 --
 ALTER TABLE `registertrans`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

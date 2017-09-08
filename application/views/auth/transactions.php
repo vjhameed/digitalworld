@@ -15,7 +15,7 @@
 <td><?php echo $value['Amount']?></td>
 <td><?php echo $value['date']?></td>
 <td><a href="<?php echo site_url()?>/auth/transDetails/<?php echo $value['id']?>/<?php echo $value['type']?>">Details</a></td>
-<td><a href="<?php echo site_url()?>/auth/completeTransaction/<?php echo $value['userid']?>">Complete</a></td>
+<td><a href="<?php echo site_url()?>/auth/completeTransaction/<?php echo $value['id']?>">Complete</a></td>
 </tr>    
 <?php } ?> 
 

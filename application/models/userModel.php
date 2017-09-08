@@ -44,6 +44,41 @@ class userModel extends CI_Model
         }
     }
 
+    function setmsg(){
+    	$insert = array('id'=>null,'userName'=>$this->input->post("name"),'userEmail'=>$this->input->post("email"),'subject'=>$this->input->post("subject"),'body'=>$this->input->post("message"),'date'=>date('y-m-d'),'status'=>'pending');
+        $this->db->insert("messages",$insert);
+    }
+
+	function getmsg(){
+    	$res = $this->db->get_where("messages","status='pending'");
+		$result = $res->result_array();
+		return $result;
+	}
+
+	function completemsg($id){
+		$set = array('status'=>'complete');
+		$this->db->update('messages',$set,"id = $id");
+		return true;
+	}
+
+    public function fetchlandinfo()
+    {
+        $result = $this->db->get("users");
+        $res = $result->result_array();
+        $dat['users'] = sizeof($res);
+		$where = "type ='withdrawal' AND status='complete'";
+		$this->db->select("Amount");
+		$result1 = $this->db->get_where("transaction",$where);
+		$res1 = $result1->result_array();
+				$amount = 10000;
+		foreach ($res1 as $value){
+			$amount += $value['Amount'];
+		}
+		$dat['amount'] = $amount;
+
+        return $dat;
+    }
+
     public function registerTransaction($username, $type, $amount = 0)
     {
             
@@ -126,9 +161,15 @@ class userModel extends CI_Model
     public function completeTrans($id)
     {
             $dat = array('status'=>'complete');
-            $this->db->update("transaction", $dat, "userid = $id");
+            $this->db->update("transaction", $dat, "id = $id");
             return true;
     }
+
+    function initilizeEarnings($username){
+		$set = array('id'=>null,'userName'=>$username);
+		$this->db->insert("levelearning",$set);
+		return true;
+	}
 
     public function initilizeAccount($username)
     {
@@ -145,9 +186,7 @@ class userModel extends CI_Model
 
     public function withdrawAmount($id, $withdraw)
     {
-
 // update accounts
-
         $this->db->select("Amount");
         $res = $this->db->get_where("accounts", "userid = $id");
         $result = $res->result_array();
@@ -174,26 +213,23 @@ class userModel extends CI_Model
 
     public function fetchRefs($id)
     {
-        
         $refferals = array();
         $res = $this->db->get_where('users', "refid = $id");
         $result = $res->result_array();
         if (!empty($res->result_array())) {
             $refferals[0] = $res->result_array();
             for ($i=0; $i < 7; $i++) {
-                # code...
+            	if(!empty($refferals[$i]))
                 foreach ($refferals[$i] as $key => $value) {
                     $res = $this->db->get_where('users', "refid =".$value['id']);
                     if (!empty($res->result_array())) {
                         $refferals[$i+1] =  $res->result_array();
                     }
-                    # code...
                 }
             }
         
 
             // to replace the refid of each ref with the name of the reffered by
-
             foreach ($refferals as & $parent) {
                 foreach ($parent as & $value) {
                     $this->db->select("username");
@@ -203,7 +239,7 @@ class userModel extends CI_Model
                 }
             }
         }
-           // var_dump($refferals);
+//            var_dump($refferals);
         return $refferals;
     }
 
@@ -212,13 +248,14 @@ class userModel extends CI_Model
 
         // bonus of refferals according to levels
           $refferalBonus = array((200/100)*20,(200/100)*18,(200/100)*15,(200/100)*10,(200/100)*8,(200/100)*5,(200/100)*3);
-
+			$offset = array('first','second','third','fourth','fifth','sixth','seventh');
           $this->db->select("refid");
           $res =  $this->db->get_where("users", "id = $id");
           $refs = $res->result_array();
 
         //   refferal id of first parent;
          $refid =  $refs[0]['refid'];
+
 
         //  seven level refferal system
         for ($i=0; $i < 7; $i++) {
@@ -227,6 +264,20 @@ class userModel extends CI_Model
             $fpr = $this->db->get_where("accounts", "userid = ".$refid);
             $fp = $fpr->result_array();
             if (!empty($fp)) {
+
+				//	update the levelearning table for the parent
+				$this->db->select('username');
+				$res2 = $this->db->get_where("users","id = $refid");
+				$result2 = $res2->result_array();
+				$username = $result2[0]['username'];
+				$res1 = $this->db->get_where("levelearning","userName = '$username'");
+				$result1 = $res1->result_array();
+				$index = $offset[$i];
+				$entry = $result1[0][$index];
+				$entry = $entry + $refferalBonus[$i];
+				$set = array($index =>$entry);
+				$this->db->update('levelearning',$set,"userName = '$username'");
+
                 $amount = $fp[0]['amount'];
                 $amount += $refferalBonus[$i];
                 $dat = array("amount"=>$amount);
@@ -239,4 +290,14 @@ class userModel extends CI_Model
             }
         }
     }
+
+	function fetchLevelEarning($id){
+			$this->db->select('username');
+			$res2 = $this->db->get_where("users","id = $id");
+			$result2 = $res2->result_array();
+			$username = $result2[0]['username'];
+    		$res1 = $this->db->get_where("levelearning","username = '$username'");
+			$result2 = $res1->result_array();
+			return $result2;
+		}
 }
