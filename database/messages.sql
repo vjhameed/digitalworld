@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 08, 2017 at 11:30 AM
+-- Generation Time: Sep 10, 2017 at 05:58 PM
 -- Server version: 5.7.14
 -- PHP Version: 7.0.10
 
@@ -33,16 +33,19 @@ CREATE TABLE `messages` (
   `body` text NOT NULL,
   `date` date NOT NULL,
   `userName` text NOT NULL,
-  `status` text NOT NULL
+  `status` text NOT NULL,
+  `number` text NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `messages`
 --
 
-INSERT INTO `messages` (`id`, `userEmail`, `subject`, `body`, `date`, `userName`, `status`) VALUES
-(4, 'vjhameed3@gmail.com', 'product', 'this is a compalint', '2017-09-08', 'hameed', 'complete'),
-(5, 'vjhameed3@gmail.com', 'product', 'this is a compalint', '2017-09-08', 'hameed', 'complete');
+INSERT INTO `messages` (`id`, `userEmail`, `subject`, `body`, `date`, `userName`, `status`, `number`) VALUES
+(4, 'vjhameed3@gmail.com', 'product', 'this is a compalint', '2017-09-08', 'hameed', 'complete', ''),
+(5, 'vjhameed3@gmail.com', 'product', 'this is a compalint', '2017-09-08', 'hameed', 'complete', ''),
+(6, 'vjhameed3@gmail.com', 'suggestions', 'this si amsg', '2017-09-08', 'hameed', 'complete', '03212199355'),
+(7, 'vjhameed3@gmail.com', 'suggestions', 'this is a support msg', '2017-09-08', 'hameed', 'pending', '03212199355');
 
 --
 -- Indexes for dumped tables
@@ -62,7 +65,7 @@ ALTER TABLE `messages`
 -- AUTO_INCREMENT for table `messages`
 --
 ALTER TABLE `messages`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

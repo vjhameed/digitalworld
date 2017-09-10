@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 08, 2017 at 11:30 AM
+-- Generation Time: Sep 10, 2017 at 05:58 PM
 -- Server version: 5.7.14
 -- PHP Version: 7.0.10
 
@@ -51,7 +51,9 @@ INSERT INTO `levelearning` (`id`, `userName`, `first`, `second`, `third`, `fourt
 (7, 'vjhameed6', 40, 36, 0, 0, 0, 0, 0),
 (8, 'vjhameed7', 40, 0, 0, 0, 0, 0, 0),
 (9, 'vjhameed8', 0, 0, 0, 0, 0, 0, 0),
-(10, 'vjhameed12', 0, 0, 0, 0, 0, 0, 0);
+(10, 'vjhameed12', 0, 0, 0, 0, 0, 0, 0),
+(11, 'vjhameed15', 0, 0, 0, 0, 0, 0, 0),
+(12, 'vjhameed16', 0, 0, 0, 0, 0, 0, 0);
 
 --
 -- Indexes for dumped tables
@@ -71,7 +73,7 @@ ALTER TABLE `levelearning`
 -- AUTO_INCREMENT for table `levelearning`
 --
 ALTER TABLE `levelearning`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

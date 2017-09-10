@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 08, 2017 at 11:30 AM
+-- Generation Time: Sep 10, 2017 at 05:58 PM
 -- Server version: 5.7.14
 -- PHP Version: 7.0.10
 
@@ -43,6 +43,8 @@ CREATE TABLE `transaction` (
 --
 
 INSERT INTO `transaction` (`id`, `userid`, `name`, `email`, `username`, `status`, `Amount`, `date`, `type`) VALUES
+(73, 15, 'hameedkhan', 'vjhameed16@gmail.com', 'vjhameed16', 'waiting', 200, '2017-09-09', 'registration'),
+(72, 14, 'hameedkhan', 'vjhameed15@gmail.com', 'vjhameed15', 'waiting', 200, '2017-09-09', 'registration'),
 (71, 13, 'hameedkhan', 'vjhameed12@gmail.com', 'vjhameed12', 'waiting', 200, '2017-09-08', 'registration'),
 (70, 12, 'hameedkhan', 'vjhameed8@gmail.com', 'vjhameed8', 'waiting', 200, '2017-09-08', 'registration'),
 (69, 11, 'hameedkhan', 'vjhameed7@gmail.com', 'vjhameed7', 'waiting', 200, '2017-09-08', 'registration'),
@@ -75,7 +77,7 @@ ALTER TABLE `transaction`
 -- AUTO_INCREMENT for table `transaction`
 --
 ALTER TABLE `transaction`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=72;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=74;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

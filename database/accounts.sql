@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 08, 2017 at 11:30 AM
+-- Generation Time: Sep 10, 2017 at 05:57 PM
 -- Server version: 5.7.14
 -- PHP Version: 7.0.10
 
@@ -37,13 +37,15 @@ CREATE TABLE `accounts` (
 --
 
 INSERT INTO `accounts` (`id`, `userid`, `Amount`) VALUES
+(69, 15, 0),
+(68, 14, 0),
 (67, 13, 0),
-(66, 12, 0),
+(66, 12, 2000),
 (65, 11, 40),
 (64, 10, 76),
 (63, 9, 106),
 (62, 8, 126),
-(61, 7, 142),
+(61, 7, 2000),
 (60, 6, 152),
 (59, 5, 158);
 
@@ -65,7 +67,7 @@ ALTER TABLE `accounts`
 -- AUTO_INCREMENT for table `accounts`
 --
 ALTER TABLE `accounts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=70;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

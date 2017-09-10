@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 08, 2017 at 11:30 AM
+-- Generation Time: Sep 10, 2017 at 05:58 PM
 -- Server version: 5.7.14
 -- PHP Version: 7.0.10
 
@@ -53,7 +53,9 @@ INSERT INTO `registertrans` (`id`, `transid`, `trx`, `cnic`, `phone`, `code`, `m
 (38, 68, 0, '0', '0', 0, '', 0),
 (39, 69, 0, '0', '0', 0, '', 0),
 (40, 70, 0, '0', '0', 0, '', 0),
-(41, 71, 0, '0', '0', 0, '', 0);
+(41, 71, 0, '0', '0', 0, '', 0),
+(42, 72, 0, '0', '0', 0, '', 0),
+(43, 73, 0, '0', '0', 0, '', 0);
 
 --
 -- Indexes for dumped tables
@@ -73,7 +75,7 @@ ALTER TABLE `registertrans`
 -- AUTO_INCREMENT for table `registertrans`
 --
 ALTER TABLE `registertrans`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
