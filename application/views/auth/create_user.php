@@ -1,6 +1,11 @@
 <link href="<?php echo base_url() ?>/assets/css/bootstrap.css" rel="stylesheet">
 <link href="<?php echo base_url() ?>/assets/fonts/glyphicons-halflings-regular.woff2">
 <link href="<?php echo base_url() ?>/assets/css/navbar.css" rel="stylesheet">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
 
 <style>
 	.mynavbar {
@@ -10,6 +15,12 @@
 
 	* {
 		font-family: 'Lato';
+	}
+
+	#blog-footer {
+		background-color: black;
+		color: silver;
+		padding: 15px;
 	}
 
 </style>
@@ -27,6 +38,7 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
+			<a class="navbar-brand"><img src="<?php echo base_url() ?>/assets/html/assests/Pastel Orange at the Sun.jpg" class="img-responsive" width="40"></a>
 			<a class="navbar-brand" href="#">Digital World</a>
 		</div>
 		<div id="navbar" class="navbar-collapse collapse">
@@ -38,7 +50,7 @@
 	</div><!--/.nav-collapse -->
 </nav>
 <div class="row-fluid text-center" style="margin:10px auto;width:50%;margin-top:10%;">
-	<a href="landing.html"><img src="<?php echo base_url() ?>/assets/html/assests/72x50.png"
+	<a href="#"><img src="<?php echo base_url() ?>/assets/html/assests/Pastel Orange at the Sun.jpg"
 								class="img-responsive img-circle" style="margin:10px auto"></a>
 	<form method="post" enctype="multipart/form-data" action="<?php echo site_url() ?>/auth/create_user"
 		  class="text-center form-horizontal">
@@ -143,23 +155,22 @@
 			<div class="modal-body">
 				<p style="font-size:18px">Your Account will be activated when we recive the payment of the selected
 					package
-					<small style="font-weight:bold">Note (Contact us through our <a target="blank"
-																					href="<?php echo site_url() ?>/auth/contact">contact
-							form</a> with the trxid,cnic no,phone no,5 digit code,your email that u have entered to
-						register here and your name)
+					<small style="font-weight:bold">Note (Contact us through our <a target="blank" href="<?php echo site_url() ?>/auth/contact">contact form</a>
+						with the trxid,cnic no,phone no,5 digit code,your email that u have entered to register here and your name
+						<span class="text-danger bg-danger">(Send the cost of the package u have selected without the charges of easypaisa,mobicash etc)</span>)
 					</small>
 				</p>
-				<h4 style="font-weight:bold">Payment Method :<span
-						style="font-weight:600">EasyPaisa,Ubl Omni,Mobi Cash</span></h4>
-				<h4 style="font-weight:bold">Ph# :<span style="font-weight:600">0345-xxx-xxx-xx</span></h4>
-				<h4 style="font-weight:bold">Nic# :<span style="font-weight:600">42401-xxx-xxx-xx</span></h4>
+				<h4 style="font-weight:bold">Payment Method :
+					<span class="bg-info text-info" style="font-weight:600">EasyPaisa,Ubl Omni,Mobi Cash,Jazz Cash</span></h4>
+				<h4 style="font-weight:bold">Ph # :<span style="font-weight:600">0341-466-659-7</span></h4>
+				<h4 style="font-weight:bold">Cnic # :<span style="font-weight:600">35404-6259260-9</span></h4>
 				<h2>Thank You</h2>
 			</div>
 		</div><!-- /.modal-content -->
 	</div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
-
+<div id='blog-footer'>Designed And Developed By GetOnlineTask</div>
 <script src="<?php echo base_url() ?>/assets/js/jquery-3.2.0.min.js"></script>
 <script src="<?php echo base_url() ?>/assets/js/bootstrap.js"></script>
 <script>
@@ -187,6 +198,5 @@
 
 
 	});
-
 </script>
 </body>

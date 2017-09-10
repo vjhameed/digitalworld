@@ -108,6 +108,17 @@ class Auth extends CI_Controller {
 		}		
 	}
 
+	// to load the marketing page
+	public function marketing(){
+		$this->load->view("auth/marketing");
+	}
+
+	// to load the how it work page
+	public function works(){
+		$this->load->view("auth/works");
+	}
+
+
 
 	// to load the contact us page
 	public function contact(){
@@ -631,7 +642,7 @@ class Auth extends CI_Controller {
 
 			// check to see if we are creating the user
             // redirect them back to the admin page
-            $this->session->set_flashdata('message', "Account Created And will be Activated when payment made");
+            $this->session->set_flashdata('message', "Account Created And will be Activated when payment made (Send the cost of the package u have selected without the charges of easypaisa,mobicash etc)");
             redirect("auth/login", 'refresh');
         }
         else

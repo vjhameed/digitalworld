@@ -1,6 +1,12 @@
 <link href="<?php echo base_url() ?>/assets/css/bootstrap.css" rel="stylesheet">
 <link href="<?php echo base_url() ?>/assets/fonts/glyphicons-halflings-regular.woff2">
 <link href="<?php echo base_url() ?>/assets/css/navbar.css" rel="stylesheet">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
 
 <style>
     .mynavbar {
@@ -26,6 +32,12 @@
         font-size: 24px;
     }
 
+	#blog-footer {
+		background-color: black;
+		color: silver;
+		padding: 15px;
+	}
+
 </style>
 
 <body>
@@ -40,6 +52,7 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
+	  <a class="navbar-brand"><img src="<?php echo base_url() ?>/assets/html/assests/Pastel Orange at the Sun.jpg" class="img-responsive" width="40"></a>
     <a class="navbar-brand" href="#">Digital World</a>
   </div>
   <div id="navbar" class="navbar-collapse collapse">
@@ -55,7 +68,8 @@
         <div class="row">
             <div class="col-sm-12 col-lg-12">
                 <h1 class="h1">
-                    Contact us <small>Feel free to contact us</small></h1>
+				<img src="<?php echo base_url() ?>/assets/html/assests/Pastel Orange at the Sun.jpg" class="img-responsive" style="width: 2em;display:inline"/>
+					Contact us <small>Feel free to contact us</small></h1>
             </div>
         </div>
     </div>
@@ -101,7 +115,12 @@
                             <textarea name="message" class="form-control" rows="9" cols="25" required="required"
                                 placeholder="Message"></textarea>
                         </div>
-                    </div>
+						<div class="form-group">
+							<label for="name">
+								Phone Number</label>
+							<input type="number" name="conphone" class="form-control" required="required"/>
+						</div>
+					</div>
                     <div class="col-md-12">
                         <input type="submit" value="Send Message" class="btn btn-primary pull-right" id="btnContactUs"/>
                     </div>
@@ -157,10 +176,10 @@ $("#subject").change((e)=>{
     var formg2 = $("<div></div>").addClass("form-group").appendTo("#extra");
     $("<label></label>").text("Payment Method").appendTo(formg2);
     $("<select id='payment' name='method' required='required' class='form-control'></select>").appendTo(formg2);
-    $("<option value='easypaisa'></option>").text('Easypaisa').appendTo("#payment");
-    $("<option value='ubl omni'></option>").text('Ubl omni').appendTo("#payment");
-    $("<option value='mobi cash'></option>").text('Mobi cash').appendTo("#payment");
-
+    $("<option value='Easypaisa'></option>").text('Easypaisa').appendTo("#payment");
+    $("<option value='Ubl omni'></option>").text('Ubl omni').appendTo("#payment");
+    $("<option value='Mobi cash'></option>").text('Mobi cash').appendTo("#payment");
+	$("<option value='Jazz cash'></option>").text('Jazz cash').appendTo("#payment");
     var formg3 = $("<div></div>").addClass("form-group").appendTo("#extra");
     $("<label></label>").text("Phone").appendTo(formg3);
     $("<input type='number' class='form-control' name='phone' placeholder='enter phone no' />").appendTo(formg3);
@@ -175,3 +194,5 @@ else{
 
 
 </body>
+
+<div id='blog-footer'>Designed And Developed By GetOnlineTask</div>

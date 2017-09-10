@@ -2,16 +2,20 @@
 <link href="<?php echo base_url() ?>/assets/fonts/glyphicons-halflings-regular.woff2">
 <link href="<?php echo base_url() ?>/assets/css/navbar.css" rel="stylesheet">
 <link href="<?php echo base_url() ?>/assets/css/land.css" rel="stylesheet">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
 
 
 <style>
-    .mynavbar {
-        background-color: black;
-    }
-
     * {
         font-family: 'Lato';
     }
+	.mynavbar {
+		padding: 10px 5px;
+	}
 
 </style>
 
@@ -27,15 +31,17 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">Digital World</a>
+		<a class="navbar-brand"><img src="<?php echo base_url() ?>/assets/html/assests/Pastel Orange at the Sun.jpg" class="img-responsive" width="40"></a>
+		<a class="navbar-brand" href="#">Digital World</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-right">
             <li><a href="#" >Home</a></li>
             <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About Us<span class="caret"></span></a>
+                <a href="<?php echo site_url() ?>/auth/marketing" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Marketing plan<span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                <li><a href="#">How it Works</a></li>
+					<li><a href="<?php echo site_url() ?>/auth/marketing">Marketing Plan</a></li>
+					<li><a href="<?php echo site_url() ?>/auth/works">How it Works</a></li>
                 <li><a href="<?php echo site_url()?>/auth/contact">Contact Us</a></li>
                 </ul>
             </li>
@@ -82,11 +88,11 @@
                 </div>
 
                 <div class="mainContent col-md-3 col-xs-5 col-sm-5">
-                    <a href="#"><img src="<?php echo base_url() ?>/assets/html/assests/230x142.png" width="100%"></a>
+					<h2 class="text-center" style="background-color: black;font-size: 2em;padding: 1em;margin-top: 0px;color: white;"><?php echo $data['users'] + 100?></h2>
                     <div class="mainContentDescription">
                         <div class="row sellerInfo">
                             <div class="col-md-12">
-                                <h3><a href="#">Users Signed up today : <?php echo $data['users'] + 100?></a></h3>
+                                <h3><a href="#">Users Signed up today</a></h3>
                             </div>
                             <div class="col-md-12">
                                 <div class="gig-end">
@@ -97,11 +103,11 @@
                 </div>
 
                 <div class="mainContent col-md-3 col-xs-5 col-sm-5">
-                    <a href="#"><img src="<?php echo base_url() ?>/assets/html/assests/230x142.png" width="100%"></a>
+					<h1   class="text-center" style="background-color: black;font-size: 2em;padding: 1em;margin-top: 0px;color: white;"><?php echo $data['users'] + 500?></h1>
                     <div class="mainContentDescription">
                         <div class="row sellerInfo">
                             <div class="col-md-12">
-                                <h3><a href="#">Total Users Signed Up : <?php echo $data['users'] + 500?></a></h3>
+                                <h3><a href="#">Total Users Signed Up</a></h3>
                             </div>
                             <div class="col-md-12">
                                 <div class="gig-end">
@@ -114,11 +120,11 @@
 
 
                 <div class="mainContent col-md-3 col-xs-5 col-sm-5">
-                    <a href="#"><img src="<?php echo base_url() ?>/assets/html/assests/230x142.png" width="100%"></a>
+					<h2 class="text-center" style="background-color: black;font-size: 2em;padding: 1em;margin-top: 0px;color: white;"><?php echo $data['amount']?></h2>
                     <div class="mainContentDescription">
                         <div class="row sellerInfo">
                             <div class="col-md-12">
-                                <h3><a href="#">Total WithDrawals : <?php echo $data['amount']?></a></h3>
+                                <h3><a href="#">Total WithDrawals </a></h3>
                             </div>
                             <div class="col-md-12">
                                 <div class="gig-end">
@@ -132,7 +138,7 @@
     </div>
 </div><!-- /.container -->
 
-<div id='blog-footer'>Designed And Developed By ABC</div>
+<div id='blog-footer'>Designed And Developed By GetOnlineTask</div>
 
 
 <script src="<?php echo base_url() ?>assets/js/jquery-3.2.0.min.js"></script>

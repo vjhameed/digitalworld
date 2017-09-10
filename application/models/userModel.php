@@ -45,7 +45,7 @@ class userModel extends CI_Model
     }
 
     function setmsg(){
-    	$insert = array('id'=>null,'userName'=>$this->input->post("name"),'userEmail'=>$this->input->post("email"),'subject'=>$this->input->post("subject"),'body'=>$this->input->post("message"),'date'=>date('y-m-d'),'status'=>'pending');
+    	$insert = array('number'=>$this->input->post('conphone'),'id'=>null,'userName'=>$this->input->post("name"),'userEmail'=>$this->input->post("email"),'subject'=>$this->input->post("subject"),'body'=>$this->input->post("message"),'date'=>date('y-m-d'),'status'=>'pending');
         $this->db->insert("messages",$insert);
     }
 

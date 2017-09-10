@@ -2,6 +2,10 @@
     <link href="<?php echo base_url()?>/assets/fonts/glyphicons-halflings-regular.woff2">
     <link href="<?php echo base_url()?>/assets/css/navbar.css" rel="stylesheet">
     <link href="<?php echo base_url()?>/assets/css/forgot.css" rel="stylesheet">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
 
             <nav class="navbar  mynavbar navbar-default" id="my-nav">
                     <!-- Fixed navbar -->
@@ -13,7 +17,8 @@
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                             </button>
-                            <a class="navbar-brand" href="<?php echo site_url()?>/auth">YouVisitHub</a>
+							<a class="navbar-brand"><img src="<?php echo base_url() ?>/assets/html/assests/Pastel Orange at the Sun.jpg" class="img-responsive" width="40"></a>
+							<a class="navbar-brand" href="<?php echo site_url()?>/auth">YouVisitHub</a>
                         </div>
                         <ul class="nav navbar-nav navbar-right">
                             <li><a href="<?php echo site_url()?>/auth" >Home</a></li>                
