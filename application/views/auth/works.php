@@ -1,5 +1,7 @@
 <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>/assets/css/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>/assets/css/navbar.css">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>/assets/css/market.css">
+
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -33,7 +35,7 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand"><img src="<?php echo base_url() ?>/assets/html/assests/Pastel Orange at the Sun.jpg" class="img-responsive" width="40"></a>
+			<a class="navbar-brand"><img src="<?php echo base_url() ?>/assets/html/assests/Pastel Orange at the Sun.png" class="img-responsive" width="40"></a>
 			<a class="navbar-brand" href="<?php echo site_url() ?>/auth">Digital World</a>
 		</div>
 		<div id="navbar" class="navbar-collapse collapse">
@@ -48,8 +50,29 @@
 	</div><!--/.nav-collapse -->
 </nav>
 
+<div class="col-sm-12 col-md-3" style="margin-left: 1em">
+	<div class="leftaside">
+		<h2 class="text-center maint">Digital World</h2>
+		<p class="about">Information about digital world will go here.Lorem Ipsum is simply dummy text of the pri
+			nting and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since th
+			e 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has s
+			urvived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. I
+			t was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+			and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+	</div>
+</div>
+<div class="col-md-8 col-sm-12" style="margin-left: 1em">
+	<div class="mainmarket">
+		<h2 class="text-left maint" style="padding: 0.5em 2em">How It Works</h2>
+		<p class="marketplan">Information about digital world will go here.Lorem Ipsum is simply dummy text of the pri
+			nting and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since th
+			e 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has s
+			urvived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. I
+			t was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+			and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+	</div>
+</div>
 
-<div id='blog-footer'>Designed And Developed By GetOnlineTask</div>
 <script src="<?php echo base_url() ?>/assets/js/jquery-3.2.0.min.js"></script>
 <script src="<?php echo base_url() ?>/assets/js/bootstrap.js"></script>
 

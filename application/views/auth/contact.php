@@ -52,7 +52,7 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-	  <a class="navbar-brand"><img src="<?php echo base_url() ?>/assets/html/assests/Pastel Orange at the Sun.jpg" class="img-responsive" width="40"></a>
+	  <a class="navbar-brand"><img src="<?php echo base_url() ?>/assets/html/assests/Pastel Orange at the Sun.png" class="img-responsive" width="40"></a>
     <a class="navbar-brand" href="#">Digital World</a>
   </div>
   <div id="navbar" class="navbar-collapse collapse">
@@ -68,7 +68,7 @@
         <div class="row">
             <div class="col-sm-12 col-lg-12">
                 <h1 class="h1">
-				<img src="<?php echo base_url() ?>/assets/html/assests/Pastel Orange at the Sun.jpg" class="img-responsive" style="width: 2em;display:inline"/>
+				<img src="<?php echo base_url() ?>/assets/html/assests/Pastel Orange at the Sun.png" class="img-responsive" style="width: 2em;display:inline"/>
 					Contact us <small>Feel free to contact us</small></h1>
             </div>
         </div>

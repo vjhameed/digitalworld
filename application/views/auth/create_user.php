@@ -38,7 +38,7 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand"><img src="<?php echo base_url() ?>/assets/html/assests/Pastel Orange at the Sun.jpg" class="img-responsive" width="40"></a>
+			<a class="navbar-brand"><img src="<?php echo base_url() ?>/assets/html/assests/Pastel Orange at the Sun.png" class="img-responsive" width="40"></a>
 			<a class="navbar-brand" href="#">Digital World</a>
 		</div>
 		<div id="navbar" class="navbar-collapse collapse">
@@ -50,7 +50,7 @@
 	</div><!--/.nav-collapse -->
 </nav>
 <div class="row-fluid text-center" style="margin:10px auto;width:50%;margin-top:10%;">
-	<a href="#"><img src="<?php echo base_url() ?>/assets/html/assests/Pastel Orange at the Sun.jpg"
+	<a href="#"><img width="120" src="<?php echo base_url() ?>/assets/html/assests/Pastel Orange at the Sun.png"
 								class="img-responsive img-circle" style="margin:10px auto"></a>
 	<form method="post" enctype="multipart/form-data" action="<?php echo site_url() ?>/auth/create_user"
 		  class="text-center form-horizontal">

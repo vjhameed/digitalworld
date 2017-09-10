@@ -1,0 +1,29 @@
+.leftaside{
+	box-shadow: black 1px 1px 6px 1px;
+	margin: 0.7em;
+}
+
+.about{
+	padding: 0.8em;
+	line-height: 1.1em;
+	font-size: 1.4em;
+}
+
+.mainmarket{
+	box-shadow: black 1px 1px 6px 1px;
+	margin-top: 1.4em;
+	font-size: 1.4em;
+}
+
+.marketplan{
+	padding: 0.8em;
+	line-height: 1.1em;
+}
+
+.maint{
+	color: rgba(0,0,0,0.6);
+	text-shadow: 2px 2px 3px rgba(255,255,255,0.1);
+	background: #222;
+	font-weight: 900;
+	padding: 2em 1em;
+}
