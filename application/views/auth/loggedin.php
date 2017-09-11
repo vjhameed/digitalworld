@@ -46,7 +46,6 @@
                 </ul>
             </li>
 			<li><a href="<?php echo site_url() ?>/auth/edit_user/<?php echo $user->id ?>">Profile</a></li>
-            <li><a href="<?php echo site_url()?>/auth/create_user">Register</a></li>
             <li><a href="<?php echo site_url()?>/auth/logout">Logout</a></li>
             <li><a href="#" >Store Comming Soon</a></li>
         </ul>

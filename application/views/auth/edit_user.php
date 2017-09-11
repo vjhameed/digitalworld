@@ -141,7 +141,7 @@
 		<div class="col-md-4 text-right text-success"><span class="afigure">
 				<span
 					class="afig" style="color: forestgreen"><?php $cash = $amount[0]['Amount'];echo $amount[0]['Amount']; ?></span><span
-					style="font-size:0.8em"> Rs</span></span></div>
+					style="font-size:0.8em"><span style="font-size: 0.8em;color: forestgreen;font-weight: 600">Rs</span></span></span></div>
 		<div class="col-md-8">
 			<h4 class="amount">WithDraw Amount
 				<small>(note:minimum limit to withdraw amount is 1000 Rs)</small>
@@ -160,48 +160,11 @@
 
 
 	<?php if (!empty($refs[0])) { ?>
-		<h2 class="text-center text-info">First Level Refferals</h2>
-		<h3 class="text-center text-info">First Level Earnings : <?php echo $levelE[0]['first'];?> Rs</h3>
-		<div class="col-md-9 col-sm-12">
-			<?php foreach ($refs[0] as $key => $value) { ?>
-				<div class="col-md-2 col-sm-2 mainCont totalLinks">
-
-					<div class="link">
-						<img class="postimage"
-							 src="<?php echo base_url() ?>assets/images/<?php echo $value['company'] ?>"
-							 alt="Link Image">
-						<h3>Name :
-							<small><?php echo $value['first_name'] . $value['last_name']; ?></small>
-						</h3>
-						<h3>User Name :
-							<small><?php echo $value['username']; ?></small>
-						</h3>
-						<h3>Email :
-							<small><?php echo $value['email']; ?></small>
-						</h3>
-						<h3>Country :
-							<small><?php echo $value['country']; ?></small>
-						</h3>
-						<h6 class="text-right">Reffered By :
-							<small><?php echo $value['refid']; ?><?php if ($value['active'] == 0) {
-									echo '<span class="btn btn-default btn-circle-red"></span>';
-								} else {
-									echo '<span class="btn btn-default btn-circle-green"></span>';
-								} ?>
-							</small>
-						</h6>
-					</div>
-				</div>
-			<?php }} ?>
-		</div>
-
-	<?php if (!empty($refs[1])) { ?>
-	<h2 class="text-center text-info">Second Level Refferals</h2>
-	<h3 class="text-center text-info">Second Level Earnings : <?php echo $levelE[0]['second'];?> Rs</h3>
-	<div class="col-md-9 col-sm-12">
+		<div class="col-md-1 col-sm-12 refs">
+		<h2 class="text-center text-info">First <span style="display: inline-block;margin-left: 0.2em">Level</span> Refferals</h2>
+		<h3 class="text-center text-info">Earnings : <?php echo $levelE[0]['first'];?><span style="font-size: 0.8em;color: forestgreen;font-weight: 600">Rs</span></h3>
 		<?php foreach ($refs[0] as $key => $value) { ?>
-			<div class="col-md-2 col-sm-2 mainCont totalLinks">
-
+			<div class="col-md-12 col-sm-2 mainCont totalLinks">
 				<div class="link">
 					<img class="postimage"
 						 src="<?php echo base_url() ?>assets/images/<?php echo $value['company'] ?>"
@@ -218,7 +181,7 @@
 					<h3>Country :
 						<small><?php echo $value['country']; ?></small>
 					</h3>
-					<h6 class="text-right">Reffered By :
+					<h6>Reffered By :
 						<small><?php echo $value['refid']; ?><?php if ($value['active'] == 0) {
 								echo '<span class="btn btn-default btn-circle-red"></span>';
 							} else {
@@ -228,184 +191,217 @@
 					</h6>
 				</div>
 			</div>
+			</div>
 		<?php }} ?>
-	</div>
+
+	<?php if (!empty($refs[1])) { ?>
+		<div class="col-md-1 col-sm-12 refs">
+		<h2 class="text-center text-info">Second Level Refferals</h2>
+		<h3 class="text-center text-info">Earnings : <?php echo $levelE[0]['second'];?><span style="font-size: 0.8em;color: forestgreen;font-weight: 600">Rs</span></h3>
+		<?php foreach ($refs[1] as $key => $value) { ?>
+			<div class="col-md-12 col-sm-2 mainCont totalLinks">
+				<div class="link">
+					<img class="postimage"
+						 src="<?php echo base_url() ?>assets/images/<?php echo $value['company'] ?>"
+						 alt="Link Image">
+					<h3>Name :
+						<small><?php echo $value['first_name'] . $value['last_name']; ?></small>
+					</h3>
+					<h3>User Name :
+						<small><?php echo $value['username']; ?></small>
+					</h3>
+					<h3>Email :
+						<small><?php echo $value['email']; ?></small>
+					</h3>
+					<h3>Country :
+						<small><?php echo $value['country']; ?></small>
+					</h3>
+					<h6>Reffered By :
+						<small><?php echo $value['refid']; ?><?php if ($value['active'] == 0) {
+								echo '<span class="btn btn-default btn-circle-red"></span>';
+							} else {
+								echo '<span class="btn btn-default btn-circle-green"></span>';
+							} ?>
+						</small>
+					</h6>
+				</div>
+			</div>
+			</div>
+		<?php }} ?>
 
 	<?php if (!empty($refs[2])) { ?>
+		<div class="col-md-1 col-sm-12 refs">
 		<h2 class="text-center text-info">Third Level Refferals</h2>
-		<h3 class="text-center text-info">Third Level Earnings : <?php echo $levelE[0]['third'];?> Rs</h3>
-		<div class="col-md-offset-3 col-md-9 col-sm-12">
-			<?php foreach ($refs[2] as $key => $value) { ?>
-				<div class="col-md-2 col-sm-2 mainCont totalLinks">
-
-					<div class="link">
-						<img class="postimage"
-							 src="<?php echo base_url() ?>assets/images/<?php echo $value['company'] ?>"
-							 alt="Link Image">
-						<h3>Name :
-							<small><?php echo $value['first_name'] . $value['last_name']; ?></small>
-						</h3>
-						<h3>User Name :
-							<small><?php echo $value['username']; ?></small>
-						</h3>
-						<h3>Email :
-							<small><?php echo $value['email']; ?></small>
-						</h3>
-						<h3>Country :
-							<small><?php echo $value['country']; ?></small>
-						</h3>
-						<h6 class="text-right">Reffered By :
-							<small><?php echo $value['refid']; ?><?php if ($value['active'] == 0) {
-									echo '<span class="btn btn-default btn-circle-red"></span>';
-								} else {
-									echo '<span class="btn btn-default btn-circle-green"></span>';
-								} ?>
-							</small>
-						</h6>
-					</div>
+		<h3 class="text-center text-info">Earnings : <?php echo $levelE[0]['third'];?><span style="font-size: 0.8em;color: forestgreen;font-weight: 600">Rs</span></h3>
+		<?php foreach ($refs[2] as $key => $value) { ?>
+			<div class="col-md-12 col-sm-2 mainCont totalLinks">
+				<div class="link">
+					<img class="postimage"
+						 src="<?php echo base_url() ?>assets/images/<?php echo $value['company'] ?>"
+						 alt="Link Image">
+					<h3>Name :
+						<small><?php echo $value['first_name'] . $value['last_name']; ?></small>
+					</h3>
+					<h3>User Name :
+						<small><?php echo $value['username']; ?></small>
+					</h3>
+					<h3>Email :
+						<small><?php echo $value['email']; ?></small>
+					</h3>
+					<h3>Country :
+						<small><?php echo $value['country']; ?></small>
+					</h3>
+					<h6>Reffered By :
+						<small><?php echo $value['refid']; ?><?php if ($value['active'] == 0) {
+								echo '<span class="btn btn-default btn-circle-red"></span>';
+							} else {
+								echo '<span class="btn btn-default btn-circle-green"></span>';
+							} ?>
+						</small>
+					</h6>
 				</div>
-			<?php }} ?>
-		</div>
+			</div>
+			</div>
+		<?php }} ?>
+
 	<?php if (!empty($refs[3])) { ?>
+		<div class="col-md-1 col-sm-12 refs">
 		<h2 class="text-center text-info">Fourth Level Refferals</h2>
-		<h3 class="text-center text-info">Fourth Level Earnings : <?php echo $levelE[0]['fourth'];?> Rs</h3>
-		<div class="col-md-offset-3 col-md-9 col-sm-12">
-			<?php foreach ($refs[3] as $key => $value) { ?>
-				<div class="col-md-2 col-sm-2 mainCont totalLinks">
-
-					<div class="link">
-						<img class="postimage"
-							 src="<?php echo base_url() ?>assets/images/<?php echo $value['company'] ?>"
-							 alt="Link Image">
-						<h3>Name :
-							<small><?php echo $value['first_name'] . $value['last_name']; ?></small>
-						</h3>
-						<h3>User Name :
-							<small><?php echo $value['username']; ?></small>
-						</h3>
-						<h3>Email :
-							<small><?php echo $value['email']; ?></small>
-						</h3>
-						<h3>Country :
-							<small><?php echo $value['country']; ?></small>
-						</h3>
-						<h6 class="text-right">Reffered By :
-							<small><?php echo $value['refid']; ?><?php if ($value['active'] == 0) {
-									echo '<span class="btn btn-default btn-circle-red"></span>';
-								} else {
-									echo '<span class="btn btn-default btn-circle-green"></span>';
-								} ?>
-							</small>
-						</h6>
-					</div>
+		<h3 class="text-center text-info">Earnings : <?php echo $levelE[0]['fourth'];?><span style="font-size: 0.8em;color: forestgreen;font-weight: 600">Rs</span></h3>
+		<?php foreach ($refs[3] as $key => $value) { ?>
+			<div class="col-md-12 col-sm-2 mainCont totalLinks">
+				<div class="link">
+					<img class="postimage"
+						 src="<?php echo base_url() ?>assets/images/<?php echo $value['company'] ?>"
+						 alt="Link Image">
+					<h3>Name :
+						<small><?php echo $value['first_name'] . $value['last_name']; ?></small>
+					</h3>
+					<h3>User Name :
+						<small><?php echo $value['username']; ?></small>
+					</h3>
+					<h3>Email :
+						<small><?php echo $value['email']; ?></small>
+					</h3>
+					<h3>Country :
+						<small><?php echo $value['country']; ?></small>
+					</h3>
+					<h6>Reffered By :
+						<small><?php echo $value['refid']; ?><?php if ($value['active'] == 0) {
+								echo '<span class="btn btn-default btn-circle-red"></span>';
+							} else {
+								echo '<span class="btn btn-default btn-circle-green"></span>';
+							} ?>
+						</small>
+					</h6>
 				</div>
-			<?php }} ?>
-		</div>
+			</div>
+			</div>
+		<?php }} ?>
+
 	<?php if (!empty($refs[4])) { ?>
+		<div class="col-md-1 col-sm-12 refs">
 		<h2 class="text-center text-info">Fifth Level Refferals</h2>
-		<h3 class="text-center text-info">Fifth Level Earnings : <?php echo $levelE[0]['fifth'];?> Rs</h3>
-		<div class="col-md-offset-3 col-md-9 col-sm-12">
-			<?php foreach ($refs[4] as $key => $value) { ?>
-				<div class="col-md-2 col-sm-2 mainCont totalLinks">
-
-					<div class="link">
-						<img class="postimage"
-							 src="<?php echo base_url() ?>assets/images/<?php echo $value['company'] ?>"
-							 alt="Link Image">
-						<h3>Name :
-							<small><?php echo $value['first_name'] . $value['last_name']; ?></small>
-						</h3>
-						<h3>User Name :
-							<small><?php echo $value['username']; ?></small>
-						</h3>
-						<h3>Email :
-							<small><?php echo $value['email']; ?></small>
-						</h3>
-						<h3>Country :
-							<small><?php echo $value['country']; ?></small>
-						</h3>
-						<h6 class="text-right">Reffered By :
-							<small><?php echo $value['refid']; ?><?php if ($value['active'] == 0) {
-									echo '<span class="btn btn-default btn-circle-red"></span>';
-								} else {
-									echo '<span class="btn btn-default btn-circle-green"></span>';
-								} ?>
-							</small>
-						</h6>
-					</div>
+		<h3 class="text-center text-info">Earnings : <?php echo $levelE[0]['fifth'];?><span style="font-size: 0.8em;color: forestgreen;font-weight: 600">Rs</span></h3>
+		<?php foreach ($refs[4] as $key => $value) { ?>
+			<div class="col-md-12 col-sm-2 mainCont totalLinks">
+				<div class="link">
+					<img class="postimage"
+						 src="<?php echo base_url() ?>assets/images/<?php echo $value['company'] ?>"
+						 alt="Link Image">
+					<h3>Name :
+						<small><?php echo $value['first_name'] . $value['last_name']; ?></small>
+					</h3>
+					<h3>User Name :
+						<small><?php echo $value['username']; ?></small>
+					</h3>
+					<h3>Email :
+						<small><?php echo $value['email']; ?></small>
+					</h3>
+					<h3>Country :
+						<small><?php echo $value['country']; ?></small>
+					</h3>
+					<h6>Reffered By :
+						<small><?php echo $value['refid']; ?><?php if ($value['active'] == 0) {
+								echo '<span class="btn btn-default btn-circle-red"></span>';
+							} else {
+								echo '<span class="btn btn-default btn-circle-green"></span>';
+							} ?>
+						</small>
+					</h6>
 				</div>
-			<?php } }?>
-		</div>
+			</div>
+			</div>
+		<?php }} ?>
+
 	<?php if (!empty($refs[5])) { ?>
+		<div class="col-md-1 col-sm-12 refs">
 		<h2 class="text-center text-info">Sixth Level Refferals</h2>
-		<h3 class="text-center text-info">Sixth Level Earnings : <?php echo $levelE[0]['sixth'];?> Rs</h3>
-		<div class="col-md-offset-3 col-md-9 col-sm-12">
-			<?php foreach ($refs[5] as $key => $value) { ?>
-				<div class="col-md-2 col-sm-2 mainCont totalLinks">
-
-					<div class="link">
-						<img class="postimage"
-							 src="<?php echo base_url() ?>assets/images/<?php echo $value['company'] ?>"
-							 alt="Link Image">
-						<h3>Name :
-							<small><?php echo $value['first_name'] . $value['last_name']; ?></small>
-						</h3>
-						<h3>User Name :
-							<small><?php echo $value['username']; ?></small>
-						</h3>
-						<h3>Email :
-							<small><?php echo $value['email']; ?></small>
-						</h3>
-						<h3>Country :
-							<small><?php echo $value['country']; ?></small>
-						</h3>
-						<h6 class="text-right">Reffered By :
-							<small><?php echo $value['refid']; ?><?php if ($value['active'] == 0) {
-									echo '<span class="btn btn-default btn-circle-red"></span>';
-								} else {
-									echo '<span class="btn btn-default btn-circle-green"></span>';
-								} ?>
-							</small>
-						</h6>
-					</div>
+		<h3 class="text-center text-info">Earnings : <?php echo $levelE[0]['sixth'];?><span style="font-size: 0.8em;color: forestgreen;font-weight: 600">Rs</span></h3>
+		<?php foreach ($refs[5] as $key => $value) { ?>
+			<div class="col-md-12 col-sm-2 mainCont totalLinks">
+				<div class="link">
+					<img class="postimage"
+						 src="<?php echo base_url() ?>assets/images/<?php echo $value['company'] ?>"
+						 alt="Link Image">
+					<h3>Name :
+						<small><?php echo $value['first_name'] . $value['last_name']; ?></small>
+					</h3>
+					<h3>User Name :
+						<small><?php echo $value['username']; ?></small>
+					</h3>
+					<h3>Email :
+						<small><?php echo $value['email']; ?></small>
+					</h3>
+					<h3>Country :
+						<small><?php echo $value['country']; ?></small>
+					</h3>
+					<h6>Reffered By :
+						<small><?php echo $value['refid']; ?><?php if ($value['active'] == 0) {
+								echo '<span class="btn btn-default btn-circle-red"></span>';
+							} else {
+								echo '<span class="btn btn-default btn-circle-green"></span>';
+							} ?>
+						</small>
+					</h6>
 				</div>
-			<?php }} ?>
-		</div>
+			</div>
+			</div>
+		<?php }} ?>
 	<?php if (!empty($refs[6])) { ?>
+		<div class="col-md-1 col-sm-12 refs">
 		<h2 class="text-center text-info">Seventh Level Refferals</h2>
-		<h3 class="text-center text-info">Seventh Level Earnings : <?php echo $levelE[0]['seventh'];?> Rs</h3>
-		<div class="col-md-offset-3 col-md-9 col-sm-12">
-			<?php foreach ($refs[6] as $key => $value) { ?>
-				<div class="col-md-2 col-sm-2 mainCont totalLinks">
-
-					<div class="link">
-						<img class="postimage"
-							 src="<?php echo base_url() ?>assets/images/<?php echo $value['company'] ?>"
-							 alt="Link Image">
-						<h3>Name :
-							<small><?php echo $value['first_name'] . $value['last_name']; ?></small>
-						</h3>
-						<h3>User Name :
-							<small><?php echo $value['username']; ?></small>
-						</h3>
-						<h3>Email :
-							<small><?php echo $value['email']; ?></small>
-						</h3>
-						<h3>Country :
-							<small><?php echo $value['country']; ?></small>
-						</h3>
-						<h6 class="text-right">Reffered By :
-							<small><?php echo $value['refid']; ?><?php if ($value['active'] == 0) {
-									echo '<span class="btn btn-default btn-circle-red"></span>';
-								} else {
-									echo '<span class="btn btn-default btn-circle-green"></span>';
-								} ?>
-							</small>
-						</h6>
-					</div>
+		<h3 class="text-center text-info">Earnings : <?php echo $levelE[0]['seventh'];?><span style="font-size: 0.8em;color: forestgreen;font-weight: 600">Rs</span></h3>
+		<?php foreach ($refs[6] as $key => $value) { ?>
+			<div class="col-md-12 col-sm-2 mainCont totalLinks">
+				<div class="link">
+					<img class="postimage"
+						 src="<?php echo base_url() ?>assets/images/<?php echo $value['company'] ?>"
+						 alt="Link Image">
+					<h3>Name :
+						<small><?php echo $value['first_name'] . $value['last_name']; ?></small>
+					</h3>
+					<h3>User Name :
+						<small><?php echo $value['username']; ?></small>
+					</h3>
+					<h3>Email :
+						<small><?php echo $value['email']; ?></small>
+					</h3>
+					<h3>Country :
+						<small><?php echo $value['country']; ?></small>
+					</h3>
+					<h6>Reffered By :
+						<small><?php echo $value['refid']; ?><?php if ($value['active'] == 0) {
+								echo '<span class="btn btn-default btn-circle-red"></span>';
+							} else {
+								echo '<span class="btn btn-default btn-circle-green"></span>';
+							} ?>
+						</small>
+					</h6>
 				</div>
-			<?php }} ?>
-		</div>
+			</div>
+			</div>
+		<?php }} ?>
 
 	<!-- Modal -->
 	<div id="myModal" class="modal fade" role="dialog">
@@ -528,9 +524,10 @@
 				identity: $("#wusername").val(),
 				password: $("#wpassword").val()
 			}, (data) => {
+			    console.log(data);
 				if (data === "success") {
 					$(".withdraw").removeAttr("disabled");
-					$("#logError").text("Click the With Draw button and the amount will be sent to you soon").attr("class", "logsu bg bg-success");
+					$("#logError").text("Click the WithDraw button and the amount will be sent to you soon").attr("class", "logEr bg bg-success");
 				}
 				else {
 					$("#logError").text("UserName OR Password incorrect").attr("class", "logEr bg bg-danger");
