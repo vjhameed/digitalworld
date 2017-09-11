@@ -44,6 +44,7 @@
 				<li><a href="<?php echo site_url() ?>/auth/create_user">Register</a></li>
 				<li><a href="<?php echo site_url() ?>/auth/marketing">Marketing Plan</a></li>
 				<li><a href="<?php echo site_url() ?>/auth/contact">Contact Us</a></li>
+				<li><a href="<?php echo site_url() ?>/auth/terms">Terms Of Service</a></li>
 				<li><a href="#">Store Comming Soon</a></li>
 			</ul>
 		</div>

@@ -1,6 +1,8 @@
 <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>/assets/css/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>/assets/css/land.css">
 <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>/assets/css/navbar.css">
+<link href="https://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css" rel="stylesheet">
+
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -56,6 +58,7 @@
 						<li role="separator" class="divider"></li>
 						<li><a href="<?php echo site_url() ?>/auth/works">How it Works</a></li>
 						<li><a href="<?php echo site_url() ?>/auth/contact">Contact Us</a></li>
+						<li><a href="<?php echo site_url() ?>/auth/terms">Terms Of Service</a></li>
 					</ul>
 				</li>
 				<li><a href="<?php echo site_url() ?>/auth/create_user">Register</a></li>
@@ -183,8 +186,37 @@
 </div><!-- /.modal -->
 
 
-<div id='blog-footer'>Designed And Developed By GetOnlineTask</div>
+<!--footer start from here-->
+<footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4 col-sm-6 footerleft ">
+				<div class="logofooter">Digital World</div>
+				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</p>
+				<p><i class="fa fa-map-pin"></i>795 Folsom Ave, Suite 600 San Francisco, CA 94107 P: (123) 456-7890</p>
+				<p><i class="fa fa-phone"></i> Phone : +91 9999 878 398</p>
+				<p><i class="fa fa-envelope"></i> E-mail : info@webenlance.com</p>
+			</div>
+			<div class="col-md-2 col-sm-6 paddingtop-bottom">
+				<h6 class="heading7">GENERAL LINKS</h6>
+				<ul class="footer-ul">
+					<li><a href="<?php echo site_url() ?>/auth/terms">Terms & Conditions</a></li>
+					<li><a href="<?php echo site_url() ?>/auth/marketing">Marketing Plan</a></li>
+					<li><a href="<?php echo site_url() ?>/auth/works">How It Works</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</footer>
+<!--footer start from here-->
 
+<div class="copyright">
+	<div class="container">
+		<div class="col-md-6">
+			<p>© 2017 - All Rights with GetOnlineTask</p>
+		</div>
+	</div>
+</div>
 
 <script src="<?php echo base_url() ?>/assets/js/jquery-3.2.0.min.js"></script>
 <script src="<?php echo base_url() ?>/assets/js/bootstrap.js"></script>

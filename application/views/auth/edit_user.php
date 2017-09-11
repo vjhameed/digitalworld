@@ -42,7 +42,7 @@
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
 					   aria-expanded="false">About Us<span class="caret"></span></a>
 					<ul class="dropdown-menu">
-						<li><a href="#">How it Works</a></li>
+						<li><a href="<?php echo site_url();?>/auth/works">How it Works</a></li>
 						<li><a href="<?php echo site_url() ?>/auth/contact">Contact Us</a></li>
 					</ul>
 				</li>

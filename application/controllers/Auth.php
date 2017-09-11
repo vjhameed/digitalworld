@@ -118,6 +118,10 @@ class Auth extends CI_Controller {
 		$this->load->view("auth/works");
 	}
 
+	// to load the terms of service page
+	public function terms(){
+		$this->load->view("auth/terms");
+	}
 
 
 	// to load the contact us page
@@ -183,6 +187,9 @@ class Auth extends CI_Controller {
 					echo "unsuccess";
 			}
 	}
+
+
+
 
 	// log the user in
 	public function login()

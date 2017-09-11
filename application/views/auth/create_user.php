@@ -44,6 +44,9 @@
 		<div id="navbar" class="navbar-collapse collapse">
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="<?php echo site_url() ?>/auth">Home</a></li>
+				<li><a href="<?php echo site_url() ?>/auth/terms">Terms Of Service</a></li>
+				<li><a href="<?php echo site_url() ?>/auth/marketing">Marketing Plan</a></li>
+				<li><a href="<?php echo site_url() ?>/auth/works">How It Works</a></li>
 				<li><a href="#">Store Comming Soon</a></li>
 			</ul>
 		</div>
@@ -140,6 +143,10 @@
 				</div>
 			</div>
 			<div class="form-group">
+				<label for="inputPassword" class="col-lg-5 col-lg-offset-2 control-label"><input type="radio" required>
+					By Clicking Sign Up u agree to our <a href="<?php echo site_url() ?>/auth/terms">Terms Of Service</a></label>
+			</div>
+			<div class="form-group">
 				<div class="col-lg-6 col-lg-offset-2">
 					<input type="submit" class="btn btn-primary"/>
 				</div>
@@ -162,7 +169,8 @@
 				</p>
 				<h4 style="font-weight:bold">Payment Method :
 					<span class="bg-info text-info" style="font-weight:600">EasyPaisa,Ubl Omni,Mobi Cash,Jazz Cash</span></h4>
-				<h4 style="font-weight:bold">Ph # :<span style="font-weight:600">0341-466-659-7</span></h4>
+				<h4 style="font-weight:bold">Telenor No # :<span style="font-weight:600">0341-466-659-7</span></h4>
+				<h4 style="font-weight:bold">Jazz No # :<span style="font-weight:600">0303-417-670-0</span></h4>
 				<h4 style="font-weight:bold">Cnic # :<span style="font-weight:600">35404-6259260-9</span></h4>
 				<h2>Thank You</h2>
 			</div>
@@ -170,7 +178,37 @@
 	</div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
-<div id='blog-footer'>Designed And Developed By GetOnlineTask</div>
+<!--footer start from here-->
+<footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4 col-sm-6 footerleft ">
+				<div class="logofooter">Digital World</div>
+				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</p>
+				<p><i class="fa fa-map-pin"></i>795 Folsom Ave, Suite 600 San Francisco, CA 94107 P: (123) 456-7890</p>
+				<p><i class="fa fa-phone"></i> Phone : +91 9999 878 398</p>
+				<p><i class="fa fa-envelope"></i> E-mail : info@webenlance.com</p>
+			</div>
+			<div class="col-md-2 col-sm-6 paddingtop-bottom">
+				<h6 class="heading7">GENERAL LINKS</h6>
+				<ul class="footer-ul">
+					<li><a href="<?php echo site_url() ?>/auth/terms">Terms & Conditions</a></li>
+					<li><a href="<?php echo site_url() ?>/auth/marketing">Marketing Plan</a></li>
+					<li><a href="<?php echo site_url() ?>/auth/works">How It Works</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<div class="copyright">
+	<div class="container">
+		<div class="col-md-6">
+			<p>© 2017 - All Rights with GetOnlineTask</p>
+		</div>
+	</div>
+</div>
+
 <script src="<?php echo base_url() ?>/assets/js/jquery-3.2.0.min.js"></script>
 <script src="<?php echo base_url() ?>/assets/js/bootstrap.js"></script>
 <script>

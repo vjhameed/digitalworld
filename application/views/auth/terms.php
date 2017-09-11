@@ -43,38 +43,31 @@
 				<li><a href="<?php echo site_url() ?>/auth/create_user">Register</a></li>
 				<li><a href="<?php echo site_url() ?>/auth/works">How It Works</a></li>
 				<li><a href="<?php echo site_url() ?>/auth/contact">Contact Us</a></li>
-				<li><a href="<?php echo site_url() ?>/auth/terms">Terms Of Service</a></li>
+				<li><a href="<?php echo site_url() ?>/auth/marketing">Marketing Plan</a></li>
 				<li><a href="#">Store Comming Soon</a></li>
 			</ul>
 		</div>
 	</div><!--/.nav-collapse -->
 </nav>
 
-<div class="col-sm-12 col-md-3" style="margin-left: 1em">
-	<div class="leftaside">
-		<h2 class="text-center maint">Digital World</h2>
-		<p class="about">Information about digital world will go here.Lorem Ipsum is simply dummy text of the pri
-			nting and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since th
-			e 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has s
-			urvived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. I
-			t was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-			and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-	</div>
-</div>
-<div class="col-md-8 col-sm-12" style="margin-left: 1em">
+<div class="col-md-offset-2  col-md-8 col-sm-12">
 	<div class="mainmarket">
-		<h2 class="text-left maint" style="padding: 0.5em 2em">Marketing Plan</h2>
-		<video class="" width="500px" src="https://www.youtube.com/watch?v=SCOKysMnH50" autoplay controls>
-			Sorry, your browser doesn't support embedded videos</video>
-			<p class="marketplan">Information about digital world will go here.Lorem Ipsum is simply dummy text of the pri
-			nting and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since th
-			e 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has s
-			urvived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. I
-			t was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-			and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+		<h2 class="text-left maint" style="padding: 0.5em 2em">Terms Of Service</h2>
+		<p class="marketplan">
+			<ul>
+				<li>Digitalworldshops.com will never share your personal details with anyone at any circumstances.</li>
+				<li>If user is getting referrals then a specific profit will be added to his/her account(profit percentage is available on marketing plan page).</li>
+				<li>The minimum limit to withdraw profit is 1000RS.</li>
+				<li>User can withdraw his profit using easypaisa, mobicash, Ufone money transfer or bank transfer, all additional charges(funds transfer fee charged by 3rd party companies) will be paid by user.</li>
+				<li>Minimum and maximum investment limit is 200RS.</li>
+				<li>When you click on register button you agreed with our terms and conditions.</li>
+				<li>Any suspicious act from any user will cause permanently loss from complete profit.</li>
+				<li>Money you invested is non-refundable.</li>
+				<li>Digitalworldshops has rights to remove any user account to keep community safe and clean.</li>
+			</ul>
+		</p>
 	</div>
 </div>
-
 
 <script src="<?php echo base_url() ?>/assets/js/jquery-3.2.0.min.js"></script>
 <script src="<?php echo base_url() ?>/assets/js/bootstrap.js"></script>
