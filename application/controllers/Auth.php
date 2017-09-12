@@ -750,7 +750,7 @@ class Auth extends CI_Controller {
 					}
 					else
 					{
-						redirect('/auth/loggedin', 'refresh');
+						redirect('/auth/edit_user/'.$id, 'refresh');
 					}
 
 			    }

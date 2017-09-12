@@ -57,7 +57,7 @@
                                  class="img-responsive img-rounded" width="72px" height="50">
                         </div>
                     </div>
-                    <span>Name : </span><span> <?php echo $user->first_name . " " . $user->last_name; ?></span>
+                    <span>Name : </span><span style="text-transform: capitalize"> <?php echo $user->first_name . " " . $user->last_name; ?></span>
                 </div>
 
                 <div class="recent-view  col-md-11 asideleft" style="margin-top: -5px;border-top: none;padding-top:10px;">
@@ -70,13 +70,12 @@
         </div>
 
 
-        <div class="col-sm-8 col-md-8 blog-main">
+        <div class="col-sm-8 col-md-8 blog-main text-center">
             <div id="blog-main">
                 <div class="col-md-12 newLink">
                     <img src="<?php echo base_url() ?>/assets/images/bghome.jpg" class="img-responsive banner" alt="">
                 </div>
-
-                <div class="mainContent col-md-3 col-xs-5 col-sm-5">
+				<div class="mainContent col-md-3 col-xs-5 col-sm-5" style="margin-left: 6em">
 					<h2 class="text-center" style="background-color: black;font-size: 2em;padding: 1em;margin-top: 0px;color: white;"><?php echo $data['users'] + 100?></h2>
                     <div class="mainContentDescription">
                         <div class="row sellerInfo">
@@ -132,7 +131,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-4 col-sm-6 footerleft ">
-				<div class="logofooter">Digital World</div>
+				<div class="logofooter">Digital World Shop</div>
 				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</p>
 				<p><i class="fa fa-map-pin"></i>795 Folsom Ave, Suite 600 San Francisco, CA 94107 P: (123) 456-7890</p>
 				<p><i class="fa fa-phone"></i> Phone : +91 9999 878 398</p>

@@ -50,17 +50,7 @@
 		<div id="navbar" class="navbar-collapse collapse">
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="#">Home</a></li>
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-					   aria-expanded="false">Login<span class="caret"></span></a>
-					<ul class="dropdown-menu">
-						<li><a class="log" href="#">Login</a></li>
-						<li role="separator" class="divider"></li>
-						<li><a href="<?php echo site_url() ?>/auth/works">How it Works</a></li>
-						<li><a href="<?php echo site_url() ?>/auth/contact">Contact Us</a></li>
-						<li><a href="<?php echo site_url() ?>/auth/terms">Terms Of Service</a></li>
-					</ul>
-				</li>
+				<li><a class="log" href="#">Login</a></li>
 				<li><a href="<?php echo site_url() ?>/auth/create_user">Register</a></li>
 				<li><a href="<?php echo site_url() ?>/auth/marketing">Marketing Plan</a></li>
 				<li><a href="#">Store Comming Soon</a></li>
@@ -91,7 +81,7 @@
 					<img src="<?php echo base_url() ?>/assets/images/bghome.jpg" class="img-responsive banner" alt="">
 				</div>
 
-				<div class="mainContent col-md-3 col-xs-5 col-sm-5">
+				<div class="mainContent col-md-3 col-xs-5 col-sm-5" style="margin-left: 6em">
 					<h2 class="text-center" style="background-color: black;font-size: 2em;padding: 1em;margin-top: 0px;color: white;"><?php echo $data['users'] + 100?></h2>
 					<div class="mainContentDescription">
 						<div class="row sellerInfo">
@@ -191,7 +181,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-4 col-sm-6 footerleft ">
-				<div class="logofooter">Digital World</div>
+				<div class="logofooter">Digital World Shop</div>
 				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</p>
 				<p><i class="fa fa-map-pin"></i>795 Folsom Ave, Suite 600 San Francisco, CA 94107 P: (123) 456-7890</p>
 				<p><i class="fa fa-phone"></i> Phone : +91 9999 878 398</p>

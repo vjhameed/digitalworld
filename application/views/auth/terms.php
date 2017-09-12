@@ -41,9 +41,7 @@
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="<?php echo site_url() ?>/auth">Home</a></li>
 				<li><a href="<?php echo site_url() ?>/auth/create_user">Register</a></li>
-				<li><a href="<?php echo site_url() ?>/auth/works">How It Works</a></li>
 				<li><a href="<?php echo site_url() ?>/auth/contact">Contact Us</a></li>
-				<li><a href="<?php echo site_url() ?>/auth/marketing">Marketing Plan</a></li>
 				<li><a href="#">Store Comming Soon</a></li>
 			</ul>
 		</div>

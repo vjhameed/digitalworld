@@ -13,7 +13,8 @@
 .mynavbar {
     background-color: black;
     border: none;
-    padding: 10px 5px;
+	padding: 0.7em 0.5em;
+    /*padding: 10px 5px;*/
 }
 
 .mynavbar .navbar-brand {

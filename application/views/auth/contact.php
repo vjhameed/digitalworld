@@ -200,7 +200,7 @@ else{
 	<div class="container">
 		<div class="row">
 			<div class="col-md-4 col-sm-6 footerleft ">
-				<div class="logofooter">Digital World</div>
+				<div class="logofooter">Digital World Shop</div>
 				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</p>
 				<p><i class="fa fa-map-pin"></i>795 Folsom Ave, Suite 600 San Francisco, CA 94107 P: (123) 456-7890</p>
 				<p><i class="fa fa-phone"></i> Phone : +91 9999 878 398</p>

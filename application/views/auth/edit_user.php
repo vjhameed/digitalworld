@@ -34,14 +34,8 @@
 		<div id="navbar" class="navbar-collapse collapse">
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="<?php echo site_url();?>/auth/login">Home</a></li>
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-					   aria-expanded="false">About Us<span class="caret"></span></a>
-					<ul class="dropdown-menu">
-						<li><a href="<?php echo site_url();?>/auth/works">How it Works</a></li>
-						<li><a href="<?php echo site_url() ?>/auth/contact">Contact Us</a></li>
-					</ul>
-				</li>
+				<li><a href="<?php echo site_url();?>/auth/works">How it Works</a></li>
+				<li><a href="<?php echo site_url() ?>/auth/contact">Contact Us</a></li>
 				<li><a href="<?php echo site_url() ?>/auth/logout">Logout</a></li>
 				<li><a href="#">Store Comming Soon</a></li>
 			</ul>
@@ -157,7 +151,7 @@
 
 	<?php if (!empty($refs[0])) { ?>
 		<div class="col-md-1 col-sm-12 refs">
-		<h2 class="text-center text-info">First <span style="display: inline-block;margin-left: 0.2em">Level</span> Refferals</h2>
+		<h2 class="text-center text-info reflevelehead">First Level</span> Refferals</h2>
 		<h3 class="text-center text-info">Earnings : <?php echo $levelE[0]['first'];?><span style="font-size: 0.8em;color: forestgreen;font-weight: 600">Rs</span></h3>
 		<?php foreach ($refs[0] as $key => $value) { ?>
 			<div class="col-md-12 col-sm-2 mainCont totalLinks">
@@ -193,7 +187,7 @@
 
 		<?php if (!empty($refs[1])) { ?>
 		<div class="col-md-1 col-sm-12 refs">
-		<h2 class="text-center text-info">Second Level Refferals</h2>
+		<h2 class="text-center text-info reflevelehead">Second Level Refferals</h2>
 		<h3 class="text-center text-info">Earnings : <?php echo $levelE[0]['second'];?><span style="font-size: 0.8em;color: forestgreen;font-weight: 600">Rs</span></h3>
 		<?php foreach ($refs[1] as $key => $value) { ?>
 			<div class="col-md-12 col-sm-2 mainCont totalLinks">
@@ -228,7 +222,7 @@
 
 	<?php if (!empty($refs[2])) { ?>
 		<div class="col-md-1 col-sm-12 refs">
-		<h2 class="text-center text-info">Third Level Refferals</h2>
+		<h2 class="text-center text-info reflevelehead">Third Level Refferals</h2>
 		<h3 class="text-center text-info">Earnings : <?php echo $levelE[0]['third'];?><span style="font-size: 0.8em;color: forestgreen;font-weight: 600">Rs</span></h3>
 		<?php foreach ($refs[2] as $key => $value) { ?>
 			<div class="col-md-12 col-sm-2 mainCont totalLinks">
@@ -263,7 +257,7 @@
 
 	<?php if (!empty($refs[3])) { ?>
 		<div class="col-md-1 col-sm-12 refs">
-		<h2 class="text-center text-info">Fourth Level Refferals</h2>
+		<h2 class="text-center text-info reflevelehead">Fourth Level Refferals</h2>
 		<h3 class="text-center text-info">Earnings : <?php echo $levelE[0]['fourth'];?><span style="font-size: 0.8em;color: forestgreen;font-weight: 600">Rs</span></h3>
 		<?php foreach ($refs[3] as $key => $value) { ?>
 			<div class="col-md-12 col-sm-2 mainCont totalLinks">
@@ -298,7 +292,7 @@
 
 	<?php if (!empty($refs[4])) { ?>
 		<div class="col-md-1 col-sm-12 refs">
-		<h2 class="text-center text-info">Fifth Level Refferals</h2>
+		<h2 class="text-center text-info reflevelehead">Fifth Level Refferals</h2>
 		<h3 class="text-center text-info">Earnings : <?php echo $levelE[0]['fifth'];?><span style="font-size: 0.8em;color: forestgreen;font-weight: 600">Rs</span></h3>
 		<?php foreach ($refs[4] as $key => $value) { ?>
 			<div class="col-md-12 col-sm-2 mainCont totalLinks">
@@ -333,7 +327,7 @@
 
 	<?php if (!empty($refs[5])) { ?>
 		<div class="col-md-1 col-sm-12 refs">
-		<h2 class="text-center text-info">Sixth Level Refferals</h2>
+		<h2 class="text-center text-info reflevelehead">Sixth Level Refferals</h2>
 		<h3 class="text-center text-info">Earnings : <?php echo $levelE[0]['sixth'];?><span style="font-size: 0.8em;color: forestgreen;font-weight: 600">Rs</span></h3>
 		<?php foreach ($refs[5] as $key => $value) { ?>
 			<div class="col-md-12 col-sm-2 mainCont totalLinks">
@@ -368,7 +362,7 @@
 
 	<?php if (!empty($refs[6])) { ?>
 		<div class="col-md-1 col-sm-12 refs">
-		<h2 class="text-center text-info">Seventh Level Refferals</h2>
+		<h2 class="text-center text-info reflevelehead">Seventh Level Refferals</h2>
 		<h3 class="text-center text-info">Earnings : <?php echo $levelE[0]['seventh'];?><span style="font-size: 0.8em;color: forestgreen;font-weight: 600">Rs</span></h3>
 		<?php foreach ($refs[6] as $key => $value) { ?>
 			<div class="col-md-12 col-sm-2 mainCont totalLinks">

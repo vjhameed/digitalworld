@@ -41,7 +41,6 @@
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="<?php echo site_url() ?>/auth">Home</a></li>
 				<li><a href="<?php echo site_url() ?>/auth/create_user">Register</a></li>
-				<li><a href="<?php echo site_url() ?>/auth/works">How It Works</a></li>
 				<li><a href="<?php echo site_url() ?>/auth/contact">Contact Us</a></li>
 				<li><a href="<?php echo site_url() ?>/auth/terms">Terms Of Service</a></li>
 				<li><a href="#">Store Comming Soon</a></li>
@@ -52,8 +51,8 @@
 
 <div class="col-sm-12 col-md-3" style="margin-left: 1em">
 	<div class="leftaside">
-		<h2 class="text-center maint">Digital World</h2>
-		<p class="about">Information about digital world will go here.Lorem Ipsum is simply dummy text of the pri
+		<h2 class="text-center maint">Digital World Shop</h2>
+		<p class="about">Information about Digital World Shop will go here.Lorem Ipsum is simply dummy text of the pri
 			nting and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since th
 			e 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has s
 			urvived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. I
@@ -66,7 +65,7 @@
 		<h2 class="text-left maint" style="padding: 0.5em 2em">Marketing Plan</h2>
 		<video class="" width="500px" src="https://www.youtube.com/watch?v=SCOKysMnH50" autoplay controls>
 			Sorry, your browser doesn't support embedded videos</video>
-			<p class="marketplan">Information about digital world will go here.Lorem Ipsum is simply dummy text of the pri
+			<p class="marketplan">Information about Digital World Shop will go here.Lorem Ipsum is simply dummy text of the pri
 			nting and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since th
 			e 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has s
 			urvived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. I
