@@ -1,7 +1,7 @@
 <link href="<?php echo base_url() ?>/assets/css/bootstrap.css" rel="stylesheet">
 <link href="<?php echo base_url() ?>/assets/fonts/glyphicons-halflings-regular.woff2">
-<link href="<?php echo base_url() ?>/assets/css/navbar.css" rel="stylesheet">
 <link href="<?php echo base_url() ?>/assets/css/profile.css" rel="stylesheet">
+<link href="<?php echo base_url() ?>/assets/css/navbar.css" rel="stylesheet">
 <link href="<?php echo base_url() ?>/assets/css/glyphicons-halflings-regular.woff2">
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,10 +11,6 @@
 
 
 <style>
-	.mynavbar {
-		background-color: black;
-		padding-top: 0px;
-	}
 
 	* {
 		font-family: 'Lato';

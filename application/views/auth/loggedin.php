@@ -13,9 +13,6 @@
     * {
         font-family: 'Lato';
     }
-	.mynavbar {
-		padding: 10px 5px;
-	}
 
 </style>
 

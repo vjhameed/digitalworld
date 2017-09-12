@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 10, 2017 at 05:58 PM
+-- Generation Time: Sep 12, 2017 at 04:50 PM
 -- Server version: 5.7.14
 -- PHP Version: 7.0.10
 
@@ -55,10 +55,10 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `ip_address`, `username`, `password`, `salt`, `email`, `activation_code`, `forgotten_password_code`, `forgotten_password_time`, `remember_code`, `created_on`, `last_login`, `active`, `first_name`, `last_name`, `company`, `phone`, `country`, `city`, `refid`, `package`) VALUES
-(1, '127.0.0.1', 'administrator', '$2a$07$SeBknntpZror9uyftVopmu61qg0ms8Qv1yV6FG.kQOSM.9QhmTo36', '', 'admin@admin.com', '', NULL, NULL, 'bvg0eyS3avelW3ctzmdfx.', 1268889823, 1505021509, 1, 'Admin', 'istrator', 'ADMIN', '0', '', '', '', ''),
-(5, '::1', 'vjhameed1', '$2y$08$5PUxuw069p1fPab9tvAGTuqmoKkdQnYK8GfsUq4hRhJnzuJFptjGm', NULL, 'vjhameed1@gmail.com', '3443c76110eb69f27ec08bdfb3f462a791a25856', NULL, NULL, 'Sn1QAc4T600UNDIIEFtrG.', 1504856778, 1504857416, 1, 'hameed', 'khan', '', '03420803510', 'pakistan', 'city', '', 'basic'),
+(1, '127.0.0.1', 'administrator', '$2a$07$SeBknntpZror9uyftVopmu61qg0ms8Qv1yV6FG.kQOSM.9QhmTo36', '', 'admin@admin.com', '', NULL, NULL, 'OhR2f4E7rhCRQXttjsZlBO', 1268889823, 1505234804, 1, 'Admin', 'istrator', 'ADMIN', '0', '', '', '', ''),
+(5, '::1', 'vjhameed1', '$2y$08$5PUxuw069p1fPab9tvAGTuqmoKkdQnYK8GfsUq4hRhJnzuJFptjGm', NULL, 'vjhameed1@gmail.com', '3443c76110eb69f27ec08bdfb3f462a791a25856', NULL, NULL, 'FIiNRO7wMrHmPBXygI0Y5O', 1504856778, 1505234012, 1, 'hameed', 'khan', '', '03420803510', 'pakistan', 'city', '', 'basic'),
 (6, '::1', 'vjhameed2', '$2y$08$j6TzTkAwMJ7QNXQ91WdhkeiYmewqlfjsubjwOvytzgw5MYVk0MEe6', NULL, 'vjhameed2@gmail.com', NULL, NULL, NULL, NULL, 1504856843, NULL, 1, 'hameed', 'khan', '', '03420803510', 'pakistan', 'city', '5', 'basic'),
-(7, '::1', 'vjhameed3', '$2y$08$RrX7.GRC0O.UQ6xfyP.aUO7Htjqqx6WlBQ/SzzhcsMd0VRIh/9Vyy', NULL, 'vjhameed3@gmail.com', NULL, NULL, NULL, 'CifoVuCbaDvx4bsjTFeqq.', 1504856966, 1505063564, 1, 'hameed', 'khan', '', '03420803510', 'pakistan', 'city', '6', 'basic'),
+(7, '::1', 'vjhameed3', '$2y$08$PdfPShqFdtuiCuZ.4xuCl.SckMRjpMpqmMLo1On4CVwojNF79I5HG', NULL, 'vjhameed3@gmail.com', NULL, NULL, NULL, 'qvOtd4PTUPXIKTUgRsFGa.', 1504856966, 1505214616, 1, 'hameed', 'khan', '', '03420803510', 'pakistan', 'city', '6', 'basic'),
 (8, '::1', 'vjhameed4', '$2y$08$CdGrNZXasrJu34l8yH.GUefFjIgb4O6IfPHLJyCTHydEysYRFERV.', NULL, 'vjhameed4@gmail.com', NULL, NULL, NULL, 'y9vGPlRSuQFuxd50pi606e', 1504856987, 1504868440, 1, 'hameed', 'khan', '', '03420803510', 'pakistan', 'city', '7', 'basic'),
 (9, '::1', 'vjhameed5', '$2y$08$EYolkK7xmc84T1VGYfJ5m.D9vSHt7CBsM4cHkiVLCetpc0Pj78bPy', NULL, 'vjhameed5@gmail.com', NULL, NULL, NULL, NULL, 1504857013, NULL, 1, 'hameed', 'khan', '', '03420803510', 'pakistan', 'city', '8', 'basic'),
 (10, '::1', 'vjhameed6', '$2y$08$AhggitbzbbAl5vBJ5WOUiOqE6v/0OcAu72pNP1vlMlaqb8jSgw.4O', NULL, 'vjhameed6@gmail.com', NULL, NULL, NULL, NULL, 1504857036, NULL, 1, 'hameed', 'khan', '', '03420803510', 'pakistan', 'city', '9', 'basic'),

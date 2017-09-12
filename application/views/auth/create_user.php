@@ -8,19 +8,8 @@
 
 
 <style>
-	.mynavbar {
-		background-color: black;
-		padding-top: 0px;
-	}
-
 	* {
 		font-family: 'Lato';
-	}
-
-	#blog-footer {
-		background-color: black;
-		color: silver;
-		padding: 15px;
 	}
 
 </style>

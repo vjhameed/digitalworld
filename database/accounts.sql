@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 10, 2017 at 05:57 PM
+-- Generation Time: Sep 12, 2017 at 04:49 PM
 -- Server version: 5.7.14
 -- PHP Version: 7.0.10
 
@@ -47,7 +47,7 @@ INSERT INTO `accounts` (`id`, `userid`, `Amount`) VALUES
 (62, 8, 126),
 (61, 7, 2000),
 (60, 6, 152),
-(59, 5, 158);
+(59, 5, 700);
 
 --
 -- Indexes for dumped tables
