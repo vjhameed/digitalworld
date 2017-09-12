@@ -191,10 +191,11 @@
 					</h6>
 				</div>
 			</div>
-			</div>
 		<?php }} ?>
+		</div>
 
-	<?php if (!empty($refs[1])) { ?>
+
+		<?php if (!empty($refs[1])) { ?>
 		<div class="col-md-1 col-sm-12 refs">
 		<h2 class="text-center text-info">Second Level Refferals</h2>
 		<h3 class="text-center text-info">Earnings : <?php echo $levelE[0]['second'];?><span style="font-size: 0.8em;color: forestgreen;font-weight: 600">Rs</span></h3>
@@ -226,8 +227,8 @@
 					</h6>
 				</div>
 			</div>
-			</div>
 		<?php }} ?>
+		</div>
 
 	<?php if (!empty($refs[2])) { ?>
 		<div class="col-md-1 col-sm-12 refs">
@@ -261,8 +262,8 @@
 					</h6>
 				</div>
 			</div>
-			</div>
 		<?php }} ?>
+		</div>
 
 	<?php if (!empty($refs[3])) { ?>
 		<div class="col-md-1 col-sm-12 refs">
@@ -296,8 +297,8 @@
 					</h6>
 				</div>
 			</div>
-			</div>
 		<?php }} ?>
+		</div>
 
 	<?php if (!empty($refs[4])) { ?>
 		<div class="col-md-1 col-sm-12 refs">
@@ -331,8 +332,8 @@
 					</h6>
 				</div>
 			</div>
-			</div>
 		<?php }} ?>
+		</div>
 
 	<?php if (!empty($refs[5])) { ?>
 		<div class="col-md-1 col-sm-12 refs">
@@ -366,8 +367,9 @@
 					</h6>
 				</div>
 			</div>
-			</div>
 		<?php }} ?>
+		</div>
+
 	<?php if (!empty($refs[6])) { ?>
 		<div class="col-md-1 col-sm-12 refs">
 		<h2 class="text-center text-info">Seventh Level Refferals</h2>
@@ -400,8 +402,8 @@
 					</h6>
 				</div>
 			</div>
-			</div>
 		<?php }} ?>
+		</div>
 
 	<!-- Modal -->
 	<div id="myModal" class="modal fade" role="dialog">
